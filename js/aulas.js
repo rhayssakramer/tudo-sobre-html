@@ -79,6 +79,16 @@ const aulas = [
         tags: ['Semântica', 'SEO', 'Acessibilidade'],
         cor: '#ff9800',
         link: './aula8/'
+    },
+    {
+        numero: '09',
+        id: 'aula-09',
+        titulo: 'Hacks de HTML que Você Precisa Saber',
+        categoria: 'AVANÇADO',
+        descricao: 'Atributos data-*, contenteditable, download, datalist, details/summary e otimizações com defer/async.',
+        tags: ['Hacks', 'Avançado', 'Performance'],
+        cor: '#9c27b0',
+        link: './aula9/'
     }
 ];
 

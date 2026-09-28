@@ -1,0 +1,468 @@
+/* VARIÁVEIS GLOBAIS */
+:root {
+    --primary-color: #ff6b35;
+    --secondary-color: #4a90a4;
+    --light-bg: #f5f0e8;
+    --dark-bg: #1a1a1a;
+    --text-dark: #2d2d2d;
+    --text-light: #6b6b6b;
+    --border-radius: 8px;
+}
+
+/* RESET E ESTILOS GLOBAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--light-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+    background: #fbf3e2;
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.logo-icon:hover {
+    transform: scale(1.1);
+}
+
+.logo h1 {
+    font-family: 'Caprasimo', serif;
+    font-size: 1.8rem;
+    color: var(--text-dark);
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: var(--primary-color);
+}
+
+/* MAIN CONTAINER */
+.aula-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+/* AULA HEADER */
+.aula-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.aula-badge {
+    display: inline-block;
+    background: var(--dark-bg);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.aula-header h1 {
+    font-family: 'Caprasimo', serif;
+    font-size: 2.8rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.aula-intro {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* HACKS SECTION */
+.hacks-section {
+    margin-bottom: 4rem;
+}
+
+.hacks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+}
+
+.hack-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 6px solid var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hack-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.hack-number {
+    display: inline-block;
+    font-family: 'Caprasimo', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.hack-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.hack-card > p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.hack-example {
+    background: #f5f0e8;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.hack-example h4 {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hack-example code {
+    display: block;
+    background: var(--dark-bg);
+    color: #00ff00;
+    padding: 1rem;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    overflow-x: auto;
+    line-height: 1.5;
+    border: 1px solid #333;
+}
+
+.hack-info {
+    background: rgba(255, 107, 53, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.hack-info h4 {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.hack-info ul {
+    list-style: none;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.hack-info li {
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.hack-info li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.hack-tip {
+    background: #fff9ec;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.hack-tip code {
+    background: var(--dark-bg);
+    color: #00ff00;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+}
+
+/* SUMMARY */
+.summary {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.summary h2 {
+    font-family: 'Caprasimo', serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.hacks-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.hacks-table thead {
+    background: var(--light-bg);
+}
+
+.hacks-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.hacks-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.hacks-table tbody tr:hover {
+    background: #f9f9f9;
+}
+
+.hacks-table strong {
+    color: var(--primary-color);
+}
+
+/* NAVIGATION */
+.aula-nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) translateX(-3px);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--text-dark);
+    border: 2px solid var(--text-dark);
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px) translateX(-3px);
+    background: var(--light-bg);
+}
+
+/* FOOTER */
+.footer {
+    background: var(--text-dark);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .aula-header h1 {
+        font-size: 2rem;
+    }
+
+    .aula-container {
+        padding: 2rem 1rem;
+    }
+
+    .hacks-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .hack-card {
+        padding: 1.5rem;
+    }
+
+    .hack-example code {
+        font-size: 0.75rem;
+    }
+
+    .hacks-table {
+        font-size: 0.85rem;
+    }
+
+    .hacks-table th,
+    .hacks-table td {
+        padding: 0.8rem 0.5rem;
+    }
+
+    .aula-nav {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        display: none;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .aula-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .hack-number {
+        font-size: 2rem;
+    }
+
+    .hack-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .summary h2 {
+        font-size: 1.5rem;
+    }
+}

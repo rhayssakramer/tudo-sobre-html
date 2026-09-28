@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 9 - Hacks de HTML | Tudo Sobre HTML</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=JetBrains+Mono:wght@400;500&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="../"><img src="../img/logo.png" alt="Logo" class="logo-icon"></a>
+                <h1>Tudo Sobre HTML</h1>
+            </div>
+            <nav class="nav">
+                <a href="../#como-funciona">Sobre</a>
+                <a href="../#aulas">Aulas</a>
+                <a href="../#hacks">Hacks HTML</a>
+                <a href="../#recursos">Recursos</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="aula-container">
+        <!-- AULA HEADER -->
+        <section class="aula-header">
+            <div class="aula-badge">AULA 09</div>
+            <h1>Hacks de HTML que Você Precisa Saber</h1>
+            <p class="aula-intro">6 técnicas avançadas e pouco conhecidas que vão turbinar seus projetos HTML. Explore cada hack de forma interativa e descubra casos de uso do mundo real.</p>
+        </section>
+
+        <!-- HACKS GRID -->
+        <section class="hacks-section">
+            <div class="hacks-grid">
+                <!-- HACK 1 -->
+                <div class="hack-card">
+                    <div class="hack-number">01</div>
+                    <h3>O Atributo data-*</h3>
+                    <p>Armazene dados customizados em elementos HTML. Perfeito para passar informações via HTML sem usar atributos estranhos ou poluir o escopo global.</p>
+                    
+                    <div class="hack-example">
+                        <h4>Exemplo Prático:</h4>
+                        <code>&lt;div data-user="123" data-name="João" data-role="admin"&gt;
+  &lt;h3&gt;Perfil do Usuário&lt;/h3&gt;
+&lt;/div&gt;</code>
+                    </div>
+
+                    <div class="hack-info">
+                        <h4>💡 Casos de Uso:</h4>
+                        <ul>
+                            <li>Armazenar IDs de banco de dados</li>
+                            <li>Guardar configurações de elementos</li>
+                            <li>Passar dados para JavaScript sem inline scripts</li>
+                            <li>Identificar elementos em testes automatizados</li>
+                        </ul>
+                    </div>
+
+                    <div class="hack-tip">
+                        <strong>✨ Dica:</strong> Acesse os dados via <code>element.dataset.userName</code> em JavaScript
+                    </div>
+                </div>
+
+                <!-- HACK 2 -->
+                <div class="hack-card">
+                    <div class="hack-number">02</div>
+                    <h3>Contenteditable</h3>
+                    <p>Transforme qualquer elemento HTML em editável sem precisar de JavaScript complexo. O navegador cuida da edição automaticamente.</p>
+                    
+                    <div class="hack-example">
+                        <h4>Exemplo Prático:</h4>
+                        <code>&lt;div contenteditable="true" spellcheck="true"&gt;
+  Clique aqui para editar o texto!
+&lt;/div&gt;</code>
+                    </div>
+
+                    <div class="hack-info">
+                        <h4>💡 Casos de Uso:</h4>
+                        <ul>
+                            <li>Editores de texto simples</li>
+                            <li>Notas e anotações inline</li>
+                            <li>Títulos que podem ser renomeados</li>
+                            <li>Prototipar aplicações rápido</li>
+                        </ul>
+                    </div>
+
+                    <div class="hack-tip">
+                        <strong>✨ Dica:</strong> Use <code>spellcheck="true"</code> para habilitar verificação ortográfica
+                    </div>
+                </div>
+
+                <!-- HACK 3 -->
+                <div class="hack-card">
+                    <div class="hack-number">03</div>
+                    <h3>Atributo download</h3>
+                    <p>Faça o download de um arquivo ao invés de navegar para ele. Funciona com qualquer tipo de arquivo: PDF, imagens, documentos, etc.</p>
+                    
+                    <div class="hack-example">
+                        <h4>Exemplo Prático:</h4>
+                        <code>&lt;a href="curriculo.pdf" download&gt;
+  Baixar Currículo
+&lt;/a&gt;
+
+&lt;a href="foto.jpg" download="minha-foto.jpg"&gt;
+  Download com nome customizado
+&lt;/a&gt;</code>
+                    </div>
+
+                    <div class="hack-info">
+                        <h4>💡 Casos de Uso:</h4>
+                        <ul>
+                            <li>Disponibilizar documentos para download</li>
+                            <li>Compartilhar certificados e diplomas</li>
+                            <li>Downloads de mídia (imagens, vídeos)</li>
+                            <li>Exportação de dados em PDF ou CSV</li>
+                        </ul>
+                    </div>
+
+                    <div class="hack-tip">
+                        <strong>✨ Dica:</strong> O atributo <code>download</code> pode ter um valor (nome customizado) ou ficar vazio
+                    </div>
+                </div>
+
+                <!-- HACK 4 -->
+                <div class="hack-card">
+                    <div class="hack-number">04</div>
+                    <h3>Input com Datalist</h3>
+                    <p>Crie autocomplete nativo sem JavaScript. O navegador renderiza sugestões automáticas baseadas em uma lista de opções.</p>
+                    
+                    <div class="hack-example">
+                        <h4>Exemplo Prático:</h4>
+                        <code>&lt;input list="cores" placeholder="Digite uma cor..."&gt;
+&lt;datalist id="cores"&gt;
+  &lt;option value="Vermelho"&gt;
+  &lt;option value="Verde"&gt;
+  &lt;option value="Azul"&gt;
+  &lt;option value="Amarelo"&gt;
+&lt;/datalist&gt;</code>
+                    </div>
+
+                    <div class="hack-info">
+                        <h4>💡 Casos de Uso:</h4>
+                        <ul>
+                            <li>Seleções de países ou cidades</li>
+                            <li>Filtros de categorias</li>
+                            <li>Histórico de buscas</li>
+                            <li>Sugestões de tecnologias/skills</li>
+                        </ul>
+                    </div>
+
+                    <div class="hack-tip">
+                        <strong>✨ Dica:</strong> Combine com <code>type="email"</code> ou <code>type="number"</code> para maior precisão
+                    </div>
+                </div>
+
+                <!-- HACK 5 -->
+                <div class="hack-card">
+                    <div class="hack-number">05</div>
+                    <h3>Details e Summary</h3>
+                    <p>Crie acordeões (collapse/expand) nativos do HTML sem JavaScript. Abrir e fechar seções nunca foi tão simples.</p>
+                    
+                    <div class="hack-example">
+                        <h4>Exemplo Prático:</h4>
+                        <code>&lt;details open&gt;
+  &lt;summary&gt;📖 Clique para expandir&lt;/summary&gt;
+  &lt;p&gt;Este é o conteúdo que aparece
+     quando você clica no resumo!&lt;/p&gt;
+&lt;/details&gt;</code>
+                    </div>
+
+                    <div class="hack-info">
+                        <h4>💡 Casos de Uso:</h4>
+                        <ul>
+                            <li>FAQ (Perguntas Frequentes)</li>
+                            <li>Acordeões de menu</li>
+                            <li>Seções colapsáveis de conteúdo</li>
+                            <li>Especificações técnicas expandíveis</li>
+                        </ul>
+                    </div>
+
+                    <div class="hack-tip">
+                        <strong>✨ Dica:</strong> Use o atributo <code>open</code> para abrir por padrão
+                    </div>
+                </div>
+
+                <!-- HACK 6 -->
+                <div class="hack-card">
+                    <div class="hack-number">06</div>
+                    <h3>Defer e Async</h3>
+                    <p>Otimize o carregamento de scripts controlar quando e como os arquivos JavaScript são executados na página.</p>
+                    
+                    <div class="hack-example">
+                        <h4>Exemplo Prático:</h4>
+                        <code>&lt;!-- Bloqueia renderização --&gt;
+&lt;script src="app.js"&gt;&lt;/script&gt;
+
+&lt;!-- Carrega em paralelo, executa após DOM --&gt;
+&lt;script src="analytics.js" defer&gt;&lt;/script&gt;
+
+&lt;!-- Carrega e executa imediatamente --&gt;
+&lt;script src="urgente.js" async&gt;&lt;/script&gt;</code>
+                    </div>
+
+                    <div class="hack-info">
+                        <h4>💡 Diferenças:</h4>
+                        <ul>
+                            <li><strong>Sem atributo:</strong> Bloqueia renderização até carregar</li>
+                            <li><strong>defer:</strong> Carrega em paralelo, executa ao fim</li>
+                            <li><strong>async:</strong> Carrega e executa ASAP (ordem indefinida)</li>
+                        </ul>
+                    </div>
+
+                    <div class="hack-tip">
+                        <strong>✨ Dica:</strong> Use <code>defer</code> para scripts que dependem do DOM
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESUMO -->
+        <section class="summary">
+            <h2>📌 Resumo dos Hacks</h2>
+            <table class="hacks-table">
+                <thead>
+                    <tr>
+                        <th>Hack</th>
+                        <th>Funcionalidade</th>
+                        <th>Melhor Uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>data-*</strong></td>
+                        <td>Armazenar dados customizados</td>
+                        <td>Passar infos para JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td><strong>contenteditable</strong></td>
+                        <td>Editar conteúdo inline</td>
+                        <td>Notas e editores simples</td>
+                    </tr>
+                    <tr>
+                        <td><strong>download</strong></td>
+                        <td>Baixar arquivos</td>
+                        <td>PDFs, documentos, mídia</td>
+                    </tr>
+                    <tr>
+                        <td><strong>datalist</strong></td>
+                        <td>Autocomplete nativo</td>
+                        <td>Seleções com sugestões</td>
+                    </tr>
+                    <tr>
+                        <td><strong>details/summary</strong></td>
+                        <td>Acordeões nativos</td>
+                        <td>FAQs, menus colapsáveis</td>
+                    </tr>
+                    <tr>
+                        <td><strong>defer/async</strong></td>
+                        <td>Otimizar carregamento JS</td>
+                        <td>Performance de página</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- NAVEGAÇÃO -->
+        <section class="aula-nav">
+            <a href="../aula8/" class="btn btn-secondary">← Aula Anterior</a>
+            <a href="../#aulas" class="btn btn-secondary">Voltar para Aulas</a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Tudo Sobre HTML. Criado com ❤️ e muito código.</p>
+            <div class="footer-links">
+                <a href="../#sobre">Sobre</a>
+                <a href="../#aulas">Aulas</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
