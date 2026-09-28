@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1 - Introdução ao HTML | Tudo Sobre HTML</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=JetBrains+Mono:wght@400;500&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="../"><img src="../img/logo.png" alt="Logo" class="logo-icon"></a>
+                <h1>Tudo Sobre HTML</h1>
+            </div>
+            <nav class="nav">
+                <a href="../#como-funciona">Sobre</a>
+                <a href="../#aulas">Aulas</a>
+                <a href="../#recursos">Recursos</a>
+                <a href="https://github.com/rhayssakramer/tudo-sobre-html" target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="aula-container">
+        <!-- AULA HEADER -->
+        <section class="aula-header">
+            <span class="aula-badge">AULA 01</span>
+            <h1>Introdução ao HTML</h1>
+            <p class="intro-text">Conheça a história do HTML, entenda o que é, como funciona a comunicação cliente-servidor, explore navegadores e aplicações web.</p>
+        </section>
+
+        <!-- TABELA DE CONTEÚDOS -->
+        <section class="toc-section">
+            <h2>📚 Índice de Conteúdos</h2>
+            <nav class="toc-list">
+                <a href="#historia">1. História do HTML</a>
+                <a href="#oque-html">2. O que é o HTML?</a>
+                <a href="#client-server">3. Comunicação Client x Server</a>
+                <a href="#protocolos">4. O que são Protocolos?</a>
+                <a href="#requisicao">5. Requisição (Request)</a>
+                <a href="#resposta">6. Resposta (Response)</a>
+                <a href="#formatos">7. Formatos de Dados</a>
+                <a href="#apis">8. APIs (Application Programming Interface)</a>
+                <a href="#navegadores">9. Navegadores</a>
+                <a href="#apps-web">10. Aplicações Web</a>
+                <a href="#mobile">11. Dispositivos Móveis</a>
+            </nav>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- SEÇÃO 1: HISTÓRIA DO HTML -->
+        <section class="content-section" id="historia">
+            <span class="section-label">01 · HISTÓRIA DO HTML</span>
+            <h2>A jornada do <span class="highlight">HTML</span> através dos tempos.</h2>
+            
+            <div class="content-block">
+                <p>Criada por <strong>Tim Berners-Lee</strong> e publicada na década de 1990, o <strong>HTML (HyperText Markup Language)</strong> é a linguagem padrão para criação de páginas na web. Sua história remonta ao início da internet moderna e passou por diversas evoluções ao longo dos anos. É hoje a linguagem base para todos os sites na Internet.</p>
+
+                <h3>📅 Origens e Primeiras Versões (1989 - 1995)</h3>
+                <ul>
+                    <li>Em <strong>1989</strong>, <strong>Tim Berners-Lee</strong>, cientista do CERN, propôs um sistema de hipertexto para facilitar o compartilhamento de informações entre pesquisadores.</li>
+                    <li>Em <strong>1991</strong>, ele criou a primeira versão do <strong>HTML</strong>, com 18 tags básicas, incluindo <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code> e <code>&lt;img&gt;</code>.</li>
+                    <li>Em <strong>1993</strong>, a primeira especificação formal do HTML foi publicada por Berners-Lee e o NCSA Mosaic popularizou a web.</li>
+                    <li>Em <strong>1995</strong>, surgiu o <strong>HTML 2.0</strong>, consolidando os padrões usados na época.</li>
+                </ul>
+
+                <h3>📈 Evolução e Padrões (1997 - 2004)</h3>
+                <ul>
+                    <li><strong>HTML 3.2 (1997):</strong> Introduziu suporte a tabelas, scripts e estilização via CSS.</li>
+                    <li><strong>HTML 4.01 (1999):</strong> Separou estrutura (HTML) da apresentação (CSS), tornando o código mais limpo.</li>
+                    <li><strong>XHTML (2000 - 2004):</strong> Tentou tornar o HTML mais rígido e baseado em XML, mas não foi amplamente adotado.</li>
+                </ul>
+
+                <h3>🚀 O Surgimento do HTML5 (2008 - Presente)</h3>
+                <ul>
+                    <li>Em <strong>2008</strong>, o <strong>HTML5</strong> foi proposto pelo <strong>WHATWG</strong> e <strong>W3C</strong>, focando em interatividade e suporte a multimídia sem plugins como Flash.</li>
+                    <li>O <strong>HTML5 foi oficializado em 2014</strong>, trazendo novidades como:
+                        <ul>
+                            <li>🏷️ <strong>Tags semânticas</strong> (<code>&lt;header&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>).</li>
+                            <li>🎬 <strong>Elementos multimídia nativos</strong> (<code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>).</li>
+                            <li>🎨 <strong>Canvas e SVG</strong> para gráficos dinâmicos.</li>
+                            <li>⚙️ <strong>APIs</strong> para geolocalização, armazenamento local e aplicações offline.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: O QUE É HTML? -->
+        <section class="content-section" id="oque-html">
+            <span class="section-label">02 · O QUE É HTML?</span>
+            <h2>A linguagem de marcação que <span class="highlight">constrói a web</span>.</h2>
+            
+            <div class="content-block">
+                <p>É uma <strong>linguagem de marcação</strong> utilizada na construção de páginas web/websites, no desktop ou mobile. <strong>HTML</strong> quer dizer <strong>"Hyper Text Markup Language"</strong> ou seja <strong>"Linguagem de Marcação de Hipertexto"</strong>. O HTML é a base para todas as aplicações web que visualizamos.</p>
+
+                <div class="info-box warning">
+                    <strong>⚠️ Atenção!</strong> HTML não é linguagem de programação. HTML baseia-se em marcações que dão significado aos elementos.
+                </div>
+
+                <h3>🏷️ Tags e Estrutura</h3>
+                <p>O HTML baseia-se em <strong>Tags</strong> para definir o seu conteúdo. As Tags são delimitadas pelos sinais de <strong>&lt;</strong> e <strong>&gt;</strong> e definem o significado de um determinado elemento.</p>
+
+                <pre><code class="code-block">&lt;p&gt; Um parágrafo &lt;/p&gt;</code></pre>
+
+                <div class="info-box info">
+                    <strong>📌 Exemplo:</strong> Para definir um parágrafo no documento na página web, utiliza-se a tag <strong>p</strong> entre o sinal de maior e menor <code>&lt;p&gt;</code> e um texto. Tem-se ainda a tag de abertura <code>&lt;&gt;</code> e a tag de fechamento <code>&lt;/&gt;</code>, que delimitam o conteúdo desse parágrafo.
+                </div>
+
+                <h3>🌐 O Papel do HTML</h3>
+                <p>O HTML conta ainda com diversas outras tags que estruturam o documento, adicionando imagens, cabeçalhos, botões, elementos de interação com o usuário, como campos para digitação de texto, que poderão ser interpretados e apresentados para o usuário de forma amigável.</p>
+
+                <p>Um documento HTML é composto por diversas tags que em conjunto, definem a estrutura e o conteúdo da página, e também como ela deve ser lida, tanto por um ser humano, como por uma máquina que irá interpretar aquele documento, que é normalmente, um <strong>navegador da internet</strong>.</p>
+
+                <div class="info-box info">
+                    <strong>📌 Navegadores:</strong> Os browsers são software capazes de interpretar um documento HTML e gerar um resultado gráfico. E esse resultado é aquele que vemos quando abrimos um site no nosso navegador.
+                </div>
+
+                <h3>🎨 HTML + CSS + JavaScript</h3>
+                <p>O <strong>HTML</strong> é responsável pela <strong>estrutura</strong> e na <strong>aparência visual</strong> contam como <strong>CSS</strong> "Cascading Style Sheets" e o <strong>JavaScript</strong>, duas outras linguagens empregadas na programação web, em conjunto com o HTML, para definir a aparência e o funcionamento das páginas.</p>
+
+                <div class="info-box tip">
+                    <strong>💡 Dica:</strong> A documentação do HTML está no site <a href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools.com</a>.
+                </div>
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: COMUNICAÇÃO CLIENT X SERVER -->
+        <section class="content-section" id="client-server">
+            <span class="section-label">03 · COMUNICAÇÃO CLIENT X SERVER</span>
+            <h2>Cliente e servidor: <span class="highlight\">duas partes que conversam</span>.</h2>
+            
+            <div class="content-block">
+                <p>O modelo <strong>Client x Server</strong> (Cliente x Servidor) é um dos fundamentos da computação em redes e do desenvolvimento web. Ele define como os dispositivos se comunicam na internet ou em sistemas distribuídos.</p>
+
+                <h3>🔄 O Modelo</h3>
+                <p>O modelo Cliente-Servidor divide a comunicação entre dois papéis principais:</p>
+
+                <div class="two-columns">
+                    <div class="column">
+                        <h4>👤 Cliente (Front-end)</h4>
+                        <ul>
+                            <li>Solicita informações ou serviços</li>
+                            <li>Pode ser um navegador, aplicativo mobile ou qualquer dispositivo que consome dados</li>
+                            <li>Quando você acessa um site, seu navegador é o cliente</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h4>🖥️ Servidor (Back-end)</h4>
+                        <ul>
+                            <li>Processa as solicitações do cliente e responde com dados necessários</li>
+                            <li>Pode hospedar bancos de dados, APIs ou arquivos</li>
+                            <li>Quando você acessa um site, o servidor do site retorna a página</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>📡 Fluxo de Comunicação</h3>
+                <ol>
+                    <li>O cliente envia uma <strong>requisição</strong> para o servidor (exemplo: "Quero acessar a página X").</li>
+                    <li>O servidor processa essa requisição, busca as informações necessárias e responde.</li>
+                    <li>O cliente recebe os dados e exibe para o usuário.</li>
+                </ol>
+
+                <pre><code class="code-block">Cliente → (HTTP) → Servidor
+Cliente ← (HTTP) ← Servidor</code></pre>
+
+                <h3>🔗 Tipos de Comunicação Cliente-Servidor</h3>
+                <ul>
+                    <li><strong>Requisições HTTP/HTTPS:</strong> Comunicação tradicional baseada em requisições e respostas.</li>
+                    <li><strong>WebSockets:</strong> Comunicação em tempo real bidirecional.</li>
+                    <li><strong>APIs REST ou GraphQL:</strong> Formas estruturadas de envio e recebimento de dados.</li>
+                </ul>
+
+                <div class="info-box example">
+                    <strong>📌 Exemplo do dia a dia:</strong>
+                    <ul>
+                        <li>Você digita <code>www.google.com</code> no navegador</li>
+                        <li>O navegador (cliente) envia uma solicitação para o servidor do Google</li>
+                        <li>O servidor responde enviando a página inicial do Google</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <!-- SEÇÃO 4: PROTOCOLOS -->
+        <section class="content-section" id="protocolos">
+            <span class="section-label">04 · O QUE SÃO PROTOCOLOS?</span>
+            <h2>As regras que fazem a <span class="highlight">comunicação funcionar</span>.</h2>
+            
+            <div class="content-block">
+                <p><strong>Protocolos são regras de comunicação.</strong> Na computação, um protocolo define <strong>como dois sistemas se comunicam</strong>, ou seja:</p>
+                <ul>
+                    <li>Como a mensagem é enviada</li>
+                    <li>Como ela deve ser recebida</li>
+                    <li>Em que formato</li>
+                    <li>Em que ordem</li>
+                    <li>O que fazer em caso de erro</li>
+                </ul>
+
+                <div class="info-box tip">
+                    <strong>💡 Analogia simples (vida real):</strong> Imagine uma conversa no WhatsApp: Idioma = Português, Estrutura = pergunta → resposta, Emojis, áudios, textos têm regras. Se alguém falasse japonês do nada, a conversa quebraria. <strong>👉🏼 Protocolos são o "idioma" que computadores usam para conversar.</strong>
+                </div>
+
+                <h3>🔌 Principais Protocolos</h3>
+                <ul>
+                    <li><strong>HTTP (HyperText Transfer Protocol)</strong>
+                        <ul>
+                            <li>Protocolo da web</li>
+                            <li>Usado em sites, APIs, sistemas web</li>
+                            <li>Exemplo: <code>GET /usuarios</code></li>
+                        </ul>
+                    </li>
+                    <li><strong>HTTPS (HTTP Secure)</strong>
+                        <ul>
+                            <li>Versão segura do HTTP</li>
+                            <li>Usa criptografia (SSL/TLS)</li>
+                            <li>Protege: Senhas, dados pessoais, informações bancárias</li>
+                        </ul>
+                    </li>
+                    <li><strong>TCP (Transmission Control Protocol)</strong>
+                        <ul>
+                            <li>Garante que os dados cheguem completos e na ordem correta</li>
+                            <li>Usado "por baixo" do HTTP</li>
+                        </ul>
+                    </li>
+                    <li><strong>IP (Internet Protocol)</strong>
+                        <ul>
+                            <li>Identifica quem envia e quem recebe</li>
+                            <li>Exemplo: IP do cliente, IP do servidor</li>
+                        </ul>
+                    </li>
+                    <li><strong>WebSocket</strong>
+                        <ul>
+                            <li>Comunicação em tempo real</li>
+                            <li>Usado em: Chats, jogos online, notificações instantâneas</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <!-- SEÇÃO 5: REQUISIÇÃO -->
+        <section class="content-section" id="requisicao">
+            <span class="section-label">05 · REQUISIÇÃO</span>
+            <h2>A mensagem que o <span class="highlight">cliente envia</span>.</h2>
+            
+            <div class="content-block">
+                <p>Uma <strong>requisição</strong> é a mensagem enviada pelo cliente. Ela contém:</p>
+                <ul>
+                    <li>Método HTTP</li>
+                    <li>URL</li>
+                    <li>Headers</li>
+                    <li>Body (opcional)</li>
+                </ul>
+
+                <h3>🔧 Métodos HTTP mais usados</h3>
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Método</th>
+                            <th>Função</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>GET</strong></td>
+                            <td>Buscar dados</td>
+                        </tr>
+                        <tr>
+                            <td><strong>POST</strong></td>
+                            <td>Criar dados</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PUT</strong></td>
+                            <td>Atualizar dados</td>
+                        </tr>
+                        <tr>
+                            <td><strong>DELETE</strong></td>
+                            <td>Remover dados</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PATCH</strong></td>
+                            <td>Atualizar parcialmente</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code class="code-block">GET /api/usuarios</code></pre>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 6: RESPOSTA -->
+        <section class="content-section" id="resposta">
+            <span class="section-label">06 · RESPOSTA</span>
+            <h2>A mensagem que o <span class="highlight">servidor retorna</span>.</h2>
+            
+            <div class="content-block">
+                <p>A <strong>resposta</strong> vem do servidor para o cliente. Contém:</p>
+                <ul>
+                    <li>Status Code</li>
+                    <li>Headers</li>
+                    <li>Body (dados)</li>
+                </ul>
+
+                <h3>📊 Status Codes importantes</h3>
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Significado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>200</strong></td>
+                            <td>Sucesso</td>
+                        </tr>
+                        <tr>
+                            <td><strong>201</strong></td>
+                            <td>Criado</td>
+                        </tr>
+                        <tr>
+                            <td><strong>400</strong></td>
+                            <td>Erro do cliente</td>
+                        </tr>
+                        <tr>
+                            <td><strong>401</strong></td>
+                            <td>Não autorizado</td>
+                        </tr>
+                        <tr>
+                            <td><strong>403</strong></td>
+                            <td>Proibido</td>
+                        </tr>
+                        <tr>
+                            <td><strong>404</strong></td>
+                            <td>Não encontrado</td>
+                        </tr>
+                        <tr>
+                            <td><strong>500</strong></td>
+                            <td>Erro no servidor</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <!-- SEÇÃO 7: FORMATOS DE DADOS -->
+        <section class="content-section" id="formatos">
+            <span class="section-label">07 · FORMATOS DE DADOS</span>
+            <h2><span class="highlight">JSON, XML</span> e outras linguagens de dados.</h2>
+            
+            <div class="content-block">
+                <h3>📦 JSON (mais usado)</h3>
+                <pre><code class="code-block">{
+  "nome": "Rhayssa",
+  "cargo": "Desenvolvedora"
+}</code></pre>
+
+                <h3>📋 Outros Formatos</h3>
+                <ul>
+                    <li><strong>XML</strong> (mais antigo)</li>
+                    <li><strong>Form-data</strong> (upload de arquivos)</li>
+                </ul>
+
+                <div class="info-box tip">
+                    <strong>💡 Dica:</strong> JSON domina APIs modernas.
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <!-- SEÇÃO 8: APIs -->
+        <section class="content-section" id="apis">
+            <span class="section-label">08 · APIS</span>
+            <h2>O garçom que leva o <span class="highlight">pedido até a cozinha</span>.</h2>
+            
+            <div class="content-block">
+                <p>A <strong>API</strong> é o meio pelo qual o cliente conversa com o servidor.</p>
+
+                <div class="info-box tip">
+                    <strong>💡 Pense na API como:</strong> "O garçom que leva o pedido até a cozinha e traz o prato pronto."
+                </div>
+
+                <h3>🔗 Tipos de API</h3>
+                <ul>
+                    <li><strong>REST</strong> - Mais comum, baseado em HTTP</li>
+                    <li><strong>GraphQL</strong> - Query language moderna</li>
+                    <li><strong>SOAP</strong> - Legado, menos usado</li>
+                </ul>
+
+                <h3>📝 Exemplo prático: Login de usuário</h3>
+                <div class="example-box">
+                    <p><strong>1️⃣ Cliente envia:</strong></p>
+                    <pre><code class="code-block">{
+  "email": "teste@email.com",
+  "senha": "123456"
+}</code></pre>
+
+                    <p><strong>2️⃣ Servidor:</strong></p>
+                    <ul>
+                        <li>Valida dados</li>
+                        <li>Confere no banco</li>
+                        <li>Gera token</li>
+                    </ul>
+
+                    <p><strong>3️⃣ Servidor responde:</strong></p>
+                    <pre><code class="code-block">{
+  "token": "abc123xyz"
+}</code></pre>
+
+                    <p><strong>4️⃣ Cliente:</strong></p>
+                    <ul>
+                        <li>Salva o token</li>
+                        <li>Usa em requisições futuras</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <!-- SEÇÃO 9: NAVEGADORES -->
+        <section class="content-section" id="navegadores">
+            <span class="section-label">09 · NAVEGADORES</span>
+            <h2>Os programas que <span class="highlight">interpretam o HTML</span>.</h2>
+            
+            <div class="content-block">
+                <p>Os <strong>navegadores</strong> (ou browsers) são programas que permitem acessar e visualizar páginas da web. Eles interpretam <strong>HTML, CSS e JavaScript</strong> para exibir os sites corretamente.</p>
+
+                <h3>🌐 Principais Navegadores</h3>
+
+                <div class="browser-grid">
+                    <div class="browser-card">
+                        <h4>🔵 Google Chrome</h4>
+                        <p>Criado pelo Google em 2008. Baseado no motor Blink e na engine V8 (JavaScript). Suporte a extensões e integração com serviços do Google.</p>
+                    </div>
+                    <div class="browser-card">
+                        <h4>🦊 Mozilla Firefox</h4>
+                        <p>Criado pela Mozilla em 2002. Utiliza o motor Gecko. Foco em privacidade e código aberto.</p>
+                    </div>
+                    <div class="browser-card">
+                        <h4>💙 Microsoft Edge</h4>
+                        <p>Substituiu o Internet Explorer em 2015. Baseado no Chromium (mesmo motor do Chrome). Integração com Windows e IA.</p>
+                    </div>
+                    <div class="browser-card">
+                        <h4>🍎 Safari</h4>
+                        <p>Desenvolvido pela Apple, exclusivo para macOS e iOS. Usa o motor WebKit. Otimizado para dispositivos Apple.</p>
+                    </div>
+                </div>
+
+                <h3>⚙️ Como um Navegador Funciona?</h3>
+                <ol>
+                    <li><strong>O usuário digita um URL</strong> na barra de endereços.</li>
+                    <li><strong>O navegador faz uma requisição HTTP/HTTPS</strong> ao servidor do site.</li>
+                    <li><strong>O servidor responde</strong> com os arquivos da página (HTML, CSS, JavaScript).</li>
+                    <li><strong>O navegador renderiza a página</strong>, aplicando estilos e executando scripts.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 10: APLICAÇÕES WEB -->
+        <section class="content-section" id="apps-web">
+            <span class="section-label">10 · APLICAÇÕES WEB</span>
+            <h2>Sistemas que funcionam no <span class="highlight">navegador</span>.</h2>
+            
+            <div class="content-block">
+                <p>As <strong>aplicações web</strong> são sistemas acessados via navegador, sem necessidade de instalação no dispositivo do usuário. Elas utilizam a internet para funcionar e geralmente seguem o modelo <strong>Cliente-Servidor</strong>.</p>
+
+                <div class="info-box example">
+                    <strong>📌 Exemplos:</strong> Gmail, Google Drive, Netflix, Instagram, Twitter.
+                </div>
+
+                <h3>✨ Características das Aplicações Web</h3>
+                <ul>
+                    <li><strong>Acessíveis via navegador:</strong> Sem necessidade de download.</li>
+                    <li><strong>Multi-dispositivo:</strong> Funcionam em PCs, tablets e smartphones.</li>
+                    <li><strong>Facilidade de atualização:</strong> Alterações no servidor refletem para todos os usuários.</li>
+                    <li><strong>Escaláveis:</strong> Podem crescer para atender milhões de usuários.</li>
+                </ul>
+
+                <h3>🎯 Tipos de Aplicações Web</h3>
+
+                <div class="app-types">
+                    <div class="app-type">
+                        <h4>📄 Estáticas</h4>
+                        <p>Conteúdo fixo, sem interação dinâmica. Exemplo: Blogs simples e páginas institucionais.</p>
+                    </div>
+                    <div class="app-type">
+                        <h4>🔄 Dinâmicas</h4>
+                        <p>Geram conteúdo personalizado com base na interação do usuário. Exemplo: Facebook, Gmail.</p>
+                    </div>
+                    <div class="app-type">
+                        <h4>📱 Single Page Application (SPA)</h4>
+                        <p>Carregam uma única página e atualizam dinamicamente. Tecnologias: Angular, React, Vue.js.</p>
+                    </div>
+                    <div class="app-type">
+                        <h4>⚡ Progressive Web App (PWA)</h4>
+                        <p>Funciona como site e pode ser instalado no dispositivo. Funciona offline. Exemplo: Twitter Lite.</p>
+                    </div>
+                    <div class="app-type">
+                        <h4>⏱️ Tempo Real</h4>
+                        <p>Atualizam dados instantaneamente. Tecnologias: WebSockets, Firebase. Exemplo: WhatsApp Web.</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="section-divider">
+        </section>
+
+        <!-- SEÇÃO 11: DISPOSITIVOS MÓVEIS -->
+        <section class="content-section" id="mobile">
+            <span class="section-label">11 · DISPOSITIVOS MÓVEIS</span>
+            <h2>A computação que cabe na <span class="highlight">palma da mão</span>.</h2>
+            
+            <div class="content-block">
+                <p>Os <strong>dispositivos móveis</strong> são aparelhos portáteis que possuem capacidade de processamento, conexão à internet e interatividade por meio de telas sensíveis ao toque.</p>
+
+                <div class="info-box example">
+                    <strong>📌 Exemplos:</strong>
+                    <ul>
+                        <li>Smartphones (Android, iPhone)</li>
+                        <li>Tablets (iPad, Galaxy Tab)</li>
+                        <li>Smartwatches (Apple Watch, Galaxy Watch)</li>
+                        <li>Dispositivos IoT (Alexa, Google Nest)</li>
+                    </ul>
+                </div>
+
+                <h3>📱 Características dos Dispositivos Móveis</h3>
+                <ul>
+                    <li><strong>Portabilidade:</strong> Pequenos, leves e fáceis de transportar.</li>
+                    <li><strong>Conectividade:</strong> Wi-Fi, 4G, 5G, Bluetooth, NFC.</li>
+                    <li><strong>Sensores integrados:</strong> Câmera, GPS, acelerômetro.</li>
+                    <li><strong>Bateria recarregável:</strong> Independência de energia fixa.</li>
+                    <li><strong>Sistemas Operacionais próprios:</strong> Android (Google) e iOS (Apple).</li>
+                </ul>
+
+                <h3>🚀 Tipos de Aplicações para Dispositivos Móveis</h3>
+
+                <div class="mobile-apps">
+                    <div class="app-type">
+                        <h4>🎯 Aplicações Nativas</h4>
+                        <p>Desenvolvidas para um SO específico. Linguagens: Kotlin, Java (Android) | Swift (iOS). Melhor desempenho, acesso direto a hardware.</p>
+                    </div>
+                    <div class="app-type">
+                        <h4>🔀 Aplicações Híbridas</h4>
+                        <p>Código único para múltiplas plataformas. Tecnologias: Flutter, React Native, .NET MAUI. Boa performance e desenvolvimento mais rápido.</p>
+                    </div>
+                    <div class="app-type">
+                        <h4>🌐 Aplicações Web Responsivas</h4>
+                        <p>Rodam no navegador sem instalação. Tecnologias: HTML, CSS, JavaScript. Se adaptam a telas menores.</p>
+                    </div>
+                    <div class="app-type">
+                        <h4>⚙️ Progressive Web Apps (PWA)</h4>
+                        <p>Web apps com funcionalidades de apps nativos. Funcionam offline, enviam notificações. Exemplo: Twitter Lite, Spotify Web.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- SEÇÃO DE CONCLUSÃO -->
+        <section class="content-section conclusion">
+            <h2>🎓 Conclusão</h2>
+            <p>Nesta aula, você aprendeu os conceitos fundamentais do HTML, desde sua história até a compreensão de como funciona a web moderna. Entender a comunicação Cliente-Servidor, protocolos, navegadores e tipos de aplicações é essencial para qualquer desenvolvedor web.</p>
+            <p>Na próxima aula, vamos mergulhar nos detalhes das tags HTML e como estruturar um documento web corretamente!</p>
+        </section>
+
+        <!-- NAVEGAÇÃO -->
+        <section class="aula-nav">
+            <a href="../#aulas" class="btn btn-secondary">
+                <img src="../img/right-arrow.png" alt="←" class="btn-icon">
+                Voltar para Aulas
+            </a>
+            <a href="../aula2/" class="btn btn-primary">
+                Próxima Aula
+                <img src="../img/right-arrow.png" alt="→" class="btn-icon">
+            </a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 <a href="https://github.com/rhayssakramer/tudo-sobre-html">Tudo Sobre HTML</a>. Feito com 🧡 para quem quer aprender HTML de verdade</p>
+            <div class="footer-links">
+                <a href="../#como-funciona">Sobre</a>
+                <a href="https://rhayssakramer.vercel.app/">Contato</a>
+                <a href="https://github.com/rhayssakramer" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
