@@ -22,28 +22,22 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// INTERSECTION OBSERVER PARA ANIMAÇÕES
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
+// SCROLL TO TOP BUTTON
+const scrollToTopBtn = document.getElementById('scrollToTop');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add('visible');
+    } else {
+        scrollToTopBtn.classList.remove('visible');
+    }
+});
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
-        }
+scrollToTopBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
-}, observerOptions);
-
-// APLICAR ANIMAÇÃO ÀS SEÇÕES
-document.querySelectorAll('.content-section, .info-box, .browser-card, .app-type').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
 });
 
 // LOG DE INICIALIZAÇÃO

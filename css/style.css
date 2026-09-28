@@ -551,6 +551,48 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color);
 }
 
+/* SCROLL TO TOP BUTTON */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 99;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+.scroll-to-top img {
+    width: 24px;
+    height: 24px;
+
+    filter: brightness(0) invert(1);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background: #ff5722;
+    box-shadow: 0 6px 16px rgba(255, 107, 53, 0.4);
+    transform: translateY(-5px);
+}
+
 /* RECURSOS */
 .recursos {
     background: #fff9ec;
