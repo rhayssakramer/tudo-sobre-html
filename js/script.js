@@ -3,17 +3,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
-        // Se o link é de uma aula, faz scroll para a seção de aulas (header)
-        if (this.classList.contains('aula-link')) {
-            const aulasSection = document.querySelector('#aulas');
-            if (aulasSection) {
-                aulasSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        } else if (target) {
+        if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'

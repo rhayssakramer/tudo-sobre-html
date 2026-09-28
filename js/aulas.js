@@ -8,7 +8,7 @@ const aulas = [
         descricao: 'O que é HTML, estrutura básica, tags principais, anatomia de uma tag e como o navegador interpreta o código.',
         tags: ['Tags', 'Estrutura', 'Elementos'],
         cor: '#ff6b35',
-        link: '#aula-01'
+        link: './aula1/'
     },
     {
         numero: '02',
@@ -18,7 +18,7 @@ const aulas = [
         descricao: 'Tags de texto: p, h1-h6, strong, em, span, div. Como hierarquizar conteúdo e criar estrutura semântica.',
         tags: ['Tipografia', 'Semântica', 'Hierarquia'],
         cor: '#4a90a4',
-        link: '#aula-02'
+        link: './aula2/'
     },
     {
         numero: '03',
@@ -28,7 +28,7 @@ const aulas = [
         descricao: 'Tag <a>, atributo href, navegação interna e externa, âncoras, target, rel e boas práticas.',
         tags: ['Links', 'Navegação', 'Âncoras'],
         cor: '#6b5b95',
-        link: '#aula-03'
+        link: './aula3/'
     },
     {
         numero: '04',
@@ -38,7 +38,7 @@ const aulas = [
         descricao: 'Tag <img>, formatos, atributo alt, figure, picture, lazy loading e otimização.',
         tags: ['Imagens', 'Media', 'Performance'],
         cor: '#ffc107',
-        link: '#aula-04'
+        link: './aula4/'
     },
     {
         numero: '05',
@@ -48,7 +48,7 @@ const aulas = [
         descricao: 'Tags form, input, textarea, select. Atributos importantes, validação, label e acessibilidade.',
         tags: ['Forms', 'Input', 'Validação'],
         cor: '#4caf50',
-        link: '#aula-05'
+        link: './aula5/'
     },
     {
         numero: '06',
@@ -58,7 +58,7 @@ const aulas = [
         descricao: 'Tags ul, ol, li, dl. Quando usar cada tipo, aninhamento, semântica e boas práticas.',
         tags: ['Listas', 'Estrutura', 'Semântica'],
         cor: '#e91e63',
-        link: '#aula-06'
+        link: './aula6/'
     },
     {
         numero: '07',
@@ -68,7 +68,7 @@ const aulas = [
         descricao: 'Tags audio, video, source. Formatos suportados, controles, autoplay, atributos e compatibilidade.',
         tags: ['Áudio', 'Vídeo', 'Media'],
         cor: '#00bcd4',
-        link: '#aula-07'
+        link: './aula7/'
     },
     {
         numero: '08',
@@ -78,7 +78,7 @@ const aulas = [
         descricao: 'Tags header, nav, main, article, section, aside, footer. SEO, acessibilidade e estrutura semântica.',
         tags: ['Semântica', 'SEO', 'Acessibilidade'],
         cor: '#ff9800',
-        link: '#aula-08'
+        link: './aula8/'
     }
 ];
 
