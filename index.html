@@ -28,11 +28,28 @@
     <!-- HERO SECTION -->
     <section class="hero" id="sobre">
         <div class="hero-content">
-            <h2>Aprenda HTML do Zero</h2>
+            <h1>Aprenda HTML do Zero</h1>
             <p>Conteúdo interativo e prático sobre as tags completas do HTML. Sem frameworks, sem complicação. Você abre no navegador e mexe.</p>
+            
+            <!-- STATS COMPACTO -->
+            <div class="stats stats-compact">
+                <div class="stat-item">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Aulas interativas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Tags HTML</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Possibilidades</span>
+                </div>
+            </div>
+            
             <div class="hero-buttons">
                 <button class="btn btn-primary" onclick="document.querySelector('#aulas').scrollIntoView({behavior: 'smooth'})">Ver as aulas</button>
-                <button class="btn btn-secondary">Como funciona</button>
+                <button class="btn btn-secondary" onclick="document.querySelector('#como-funciona').scrollIntoView({behavior: 'smooth'})">Como funciona</button>
             </div>
         </div>
         <div class="hero-illustration">
@@ -40,19 +57,38 @@
         </div>
     </section>
 
-    <!-- STATS -->
-    <section class="stats">
-        <div class="stat-item">
-            <span class="stat-number">8</span>
-            <span class="stat-label">Aulas interativas</span>
+     <!-- COMO FUNCIONA -->
+    <section class="como-funciona" id="como-funciona">
+        <div class="como-funciona-header">
+            <span class="como-label">O QUE É ISSO AQUI</span>
+            <h2>Um curso de HTML <span class="destaque">em forma de zine</span>.</h2>
+            <p>Cada aula é uma página interativa de tela única. Sem PDF, sem slide cansado, sem framework. Você abre no navegador e mexe. As métricas se recalculam ao vivo, os gráficos respondem ao mouse, e tudo é explicado de forma criativa e prática.</p>
         </div>
-        <div class="stat-item">
-            <span class="stat-number">50+</span>
-            <span class="stat-label">Tags HTML</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">∞</span>
-            <span class="stat-label">Possibilidades</span>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>Interativo de verdade</h3>
+                <p>Sliders, matrizes clicáveis e gráficos que se mexem. Aprende mexendo.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📦</div>
+                <h3>Zero dependências</h3>
+                <p>HTML, CSS e JS puro. Abre direto no navegador, funciona offline.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💡</div>
+                <h3>Conceitos práticos</h3>
+                <p>Exemplos reais do dia a dia. Entender a teoria através da prática.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>Foco em HTML puro</h3>
+                <p>Aulas focadas nas tags e boas práticas. Sem frameworks ou bibliotecas.</p>
+            </div>
         </div>
     </section>
 
