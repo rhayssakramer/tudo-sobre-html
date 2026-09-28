@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo Sobre HTML</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <h1>Tudo Sobre HTML</h1>
+            </div>
+            <nav class="nav">
+                <a href="#sobre">Sobre</a>
+                <a href="#aulas">Aulas</a>
+                <a href="#hacks">Hacks HTML</a>
+                <a href="#recursos">Recursos</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="sobre">
+        <div class="hero-content">
+            <h2>Aprenda HTML do Zero</h2>
+            <p>Conteúdo interativo e prático sobre as tags completas do HTML. Sem frameworks, sem complicação. Você abre no navegador e mexe.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.querySelector('#aulas').scrollIntoView({behavior: 'smooth'})">Ver as aulas</button>
+                <button class="btn btn-secondary">Como funciona</button>
+            </div>
+        </div>
+        <div class="hero-illustration">
+            <div class="code-box">&lt;html&gt;</div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stat-item">
+            <span class="stat-number">8</span>
+            <span class="stat-label">Aulas interativas</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Tags HTML</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">Possibilidades</span>
+        </div>
+    </section>
+
+    <!-- AULAS -->
+    <section class="aulas" id="aulas">
+        <h2>As Aulas</h2>
+        <div class="aulas-grid">
+            <!-- Aula 01 -->
+            <div class="aula-card" style="border-top-color: #ff6b35;">
+                <div class="aula-number">01</div>
+                <div class="aula-tag">FUNDAMENTOS</div>
+                <h3>Introdução ao HTML</h3>
+                <p>O que é HTML, estrutura básica, tags principais, anatomia de uma tag e como o navegador interpreta o código.</p>
+                <div class="tags">
+                    <span class="tag">Tags</span>
+                    <span class="tag">Estrutura</span>
+                    <span class="tag">Elementos</span>
+                </div>
+                <a href="#" class="aula-link">Abrir aula →</a>
+            </div>
+
+            <!-- Aula 02 -->
+            <div class="aula-card" style="border-top-color: #4a90a4;">
+                <div class="aula-number">02</div>
+                <div class="aula-tag">TEXTOS</div>
+                <h3>Formatando Textos</h3>
+                <p>Tags de texto: p, h1-h6, strong, em, span, div. Como hierarquizar conteúdo e criar estrutura semântica.</p>
+                <div class="tags">
+                    <span class="tag">Tipografia</span>
+                    <span class="tag">Semântica</span>
+                    <span class="tag">Hierarquia</span>
+                </div>
+                <a href="#" class="aula-link">Abrir aula →</a>
+            </div>
+
+            <!-- Aula 03 -->
+            <div class="aula-card" style="border-top-color: #6b5b95;">
+                <div class="aula-number">03</div>
+                <div class="aula-tag">LINKS</div>
+                <h3>Navegação com Links</h3>
+                <p>Tag <code>&lt;a&gt;</code>, atributo href, navegação interna e externa, âncoras, target, rel e boas práticas.</p>
+                <div class="tags">
+                    <span class="tag">Links</span>
+                    <span class="tag">Navegação</span>
+                    <span class="tag">Âncoras</span>
+                </div>
+                <a href="#" class="aula-link">Abrir aula →</a>
+            </div>
+
+            <!-- Aula 04 -->
+            <div class="aula-card" style="border-top-color: #ffc107;">
+                <div class="aula-number">04</div>
+                <div class="aula-tag">IMAGENS</div>
+                <h3>Inserindo Imagens</h3>
+                <p>Tag <code>&lt;img&gt;</code>, formatos, atributo alt, figure, picture, lazy loading e otimização.</p>
+                <div class="tags">
+                    <span class="tag">Imagens</span>
+                    <span class="tag">Media</span>
+                    <span class="tag">Performance</span>
+                </div>
+                <a href="#" class="aula-link">Abrir aula →</a>
+            </div>
+
+            <!-- Aula 05 -->
+            <div class="aula-card" style="border-top-color: #4caf50;">
+                <div class="aula-number">05</div>
+                <div class="aula-tag">FORMULÁRIOS</div>
+                <h3>Criando Formulários</h3>
+                <p>Tags form, input, textarea, select. Atributos importantes, validação, label e acessibilidade.</p>
+                <div class="tags">
+                    <span class="tag">Forms</span>
+                    <span class="tag">Input</span>
+                    <span class="tag">Validação</span>
+                </div>
+                <a href="#" class="aula-link">Abrir aula →</a>
+            </div>
+
+            <!-- Aula 06 -->
+            <div class="aula-card" style="border-top-color: #e91e63;">
+                <div class="aula-number">06</div>
+                <div class="aula-tag">LISTAS</div>
+                <h3>Trabalhando com Listas</h3>
+                <p>Tags ul, ol, li, dl. Quando usar cada tipo, aninhamento, semântica e boas práticas.</p>
+                <div class="tags">
+                    <span class="tag">Listas</span>
+                    <span class="tag">Estrutura</span>
+                    <span class="tag">Semântica</span>
+                </div>
+                <a href="#" class="aula-link">Abrir aula →</a>
+            </div>
+
+            <!-- Aula 07 -->
+            <div class="aula-card" style="border-top-color: #00bcd4;">
+                <div class="aula-number">07</div>
+                <div class="aula-tag">MÍDIA</div>
+                <h3>Audio e Vídeo</h3>
+                <p>Tags audio, video, source. Formatos suportados, controles, autoplay, atributos e compatibilidade.</p>
+                <div class="tags">
+                    <span class="tag">Áudio</span>
+                    <span class="tag">Vídeo</span>
+                    <span class="tag">Media</span>
+                </div>
+                <a href="#" class="aula-link">Abrir aula →</a>
+            </div>
+
+            <!-- Aula 08 -->
+            <div class="aula-card" style="border-top-color: #ff9800;">
+                <div class="aula-number">08</div>
+                <div class="aula-tag">SEMÂNTICA</div>
+                <h3>HTML Semântico Moderno</h3>
+                <p>Tags header, nav, main, article, section, aside, footer. SEO, acessibilidade e estrutura semântica.</p>
+                <div class="tags">
+                    <span class="tag">Semântica</span>
+                    <span class="tag">SEO</span>
+                    <span class="tag">Acessibilidade</span>
+                </div>
+                <a href="#" class="aula-link">Abrir aula →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HACKS HTML -->
+    <section class="hacks" id="hacks">
+        <h2>Hacks de HTML que Você Precisa Saber</h2>
+        <div class="hacks-container">
+            <div class="hack-item">
+                <h4>1. O atributo data-*</h4>
+                <p>Armazene dados customizados em elementos HTML. Perfeito para passar informações via HTML sem usar atributos estranhos.</p>
+                <code>&lt;div data-user="123" data-name="João"&gt;&lt;/div&gt;</code>
+            </div>
+            <div class="hack-item">
+                <h4>2. Contenteditable</h4>
+                <p>Transforme qualquer elemento em editável sem JavaScript complexo.</p>
+                <code>&lt;div contenteditable="true"&gt;Clique para editar&lt;/div&gt;</code>
+            </div>
+            <div class="hack-item">
+                <h4>3. Atributo download</h4>
+                <p>Faça o download de arquivo ao invés de navegar para ele.</p>
+                <code>&lt;a href="arquivo.pdf" download&gt;Baixar PDF&lt;/a&gt;</code>
+            </div>
+            <div class="hack-item">
+                <h4>4. Input com datalist</h4>
+                <p>Crie autocomplete nativo sem JavaScript.</p>
+                <code>&lt;input list="cores"&gt;&lt;datalist id="cores"&gt;...</code>
+            </div>
+            <div class="hack-item">
+                <h4>5. Details e Summary</h4>
+                <p>Accordion nativo com &lt;details&gt; e &lt;summary&gt;.</p>
+                <code>&lt;details&gt;&lt;summary&gt;Clique&lt;/summary&gt;Conteúdo&lt;/details&gt;</code>
+            </div>
+            <div class="hack-item">
+                <h4>6. Defer e Async</h4>
+                <p>Otimize o carregamento de scripts com async (paralelo) ou defer (após DOM).</p>
+                <code>&lt;script src="app.js" defer&gt;&lt;/script&gt;</code>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Comece agora a aprender HTML</h2>
+        <p>Sem PDFs, sem slides chatos, sem framework. Você abre no navegador e mexe.</p>
+        <button class="btn btn-primary btn-lg">Ver as aulas</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Tudo Sobre HTML. Criado com ❤️ e muito código.</p>
+            <div class="footer-links">
+                <a href="#">Sobre</a>
+                <a href="#">Contato</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
