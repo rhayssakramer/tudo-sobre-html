@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -22,10 +24,14 @@ body {
     line-height: 1.6;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Caprasimo', serif;
+}
+
 /* HEADER */
 .header {
-    background: white;
-    border-bottom: 3px solid var(--primary-color);
+    background: #f5ecdf;
+    border-bottom: 4px solid var(--primary-color);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -44,15 +50,14 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     text-decoration: none;
     color: var(--text-dark);
 }
 
 .logo-icon {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--primary-color);
+    width: 27px;
+    height: auto;
 }
 
 .logo h1 {
@@ -62,7 +67,7 @@ body {
 
 .nav {
     display: flex;
-    gap: 2.5rem;
+    gap: 0.5rem;
     align-items: center;
 }
 
@@ -70,11 +75,14 @@ body {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 500;
-    transition: color 0.3s;
+    transition: all 0.3s;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
 }
 
 .nav a:hover {
-    color: var(--primary-color);
+    background-color: #2d2d2d;
+    color: white;
 }
 
 /* HERO */
@@ -150,16 +158,10 @@ body {
     align-items: center;
 }
 
-.code-box {
-    background: var(--dark-bg);
-    color: #00ff00;
-    padding: 3rem;
-    border-radius: var(--border-radius);
-    font-family: 'Courier New', monospace;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.15));
 }
 
 /* STATS */
