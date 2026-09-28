@@ -98,7 +98,7 @@ function gerarCardAula(aula) {
             <div class="tags">
                 ${tagsHTML}
             </div>
-            <a href="${aula.link}" class="aula-link">Abrir aula <img src="right-arrow.png" alt="→" class="arrow-icon"></a>
+            <a href="${aula.link}" class="aula-link">Abrir aula <img src="./img/right-arrow.png" alt="→" class="arrow-icon"></a>
         </div>
     `;
 }
