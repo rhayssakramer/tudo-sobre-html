@@ -800,6 +800,9 @@ pre::-webkit-scrollbar-thumb {
 }
 
 #btn-hero {
+    padding: 0.8rem 1.8rem;
+    width: 191px;
+    font-size: 0.95rem;
     cursor: pointer;
 }
 
