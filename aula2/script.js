@@ -41,7 +41,29 @@ scrollToTopBtn.addEventListener('click', (e) => {
 });
 
 // LOG DE INICIALIZAÇÃO
-console.log('Aula 1 - Introdução ao HTML carregada com sucesso! 🚀');
+console.log('Aula 2 - Estrutura Básica do HTML carregada com sucesso! 🚀');
+
+// HIGHLIGHT ACTIVE TOC LINK
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('.content-section');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    
+    let currentSection = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 150) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+    
+    tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+            link.classList.add('active');
+        }
+    });
+});
 
 // BOTÃO COPIAR CÓDIGO
 document.addEventListener('DOMContentLoaded', function() {

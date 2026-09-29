@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 2 - Estrutura Básica do HTML | Tudo Sobre HTML</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=JetBrains+Mono:wght@400;500&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="../"><img src="../img/logo.png" alt="Logo" class="logo-icon"></a>
+                <h1>Tudo Sobre HTML</h1>
+            </div>
+            <nav class="nav">
+                <a href="../#como-funciona">Sobre</a>
+                <a href="../#aulas">Aulas</a>
+                <a href="../#recursos">Recursos</a>
+                <a href="https://github.com/rhayssakramer/tudo-sobre-html" target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="aula-container">
+        <!-- AULA HEADER -->
+        <section class="aula-header">
+            <span class="aula-badge">AULA 02</span>
+            <h1>Estrutura Básica do HTML</h1>
+            <p class="intro-text">Aprenda os fundamentos essenciais do HTML: a estrutura mínima que todo documento precisa, elementos básicos, tags semânticas e como organizar seu código.</p>
+        </section>
+
+        <!-- TABELA DE CONTEÚDOS -->
+        <section class="toc-section">
+            <h2>📚 Índice de Conteúdos</h2>
+            <nav class="toc-list">
+                <a href="#o-que-html">1. O que é HTML?</a>
+                <a href="#por-que-estrutura">2. Por que a Estrutura Importa?</a>
+                <a href="#estrutura-minima">3. Estrutura Mínima</a>
+                <a href="#doctype">4. DOCTYPE</a>
+                <a href="#html-tag">5. Tag HTML</a>
+                <a href="#head">6. Seção HEAD</a>
+                <a href="#body">7. Seção BODY</a>
+                <a href="#indentacao">8. Indentação e Organização</a>
+                <a href="#tags-basicas">9. Tags de Abertura e Fechamento</a>
+                <a href="#comentarios">10. Comentários</a>
+                <a href="#elementos-atributos">11. Elementos e Atributos</a>
+                <a href="#tags-comuns">12. Tags Comuns</a>
+                <a href="#tags-semanticas">13. Tags Semânticas</a>
+                <a href="#meta-tags">14. Meta Tags</a>
+                <a href="#exemplo-pratico">15. Exemplo Prático</a>
+                <a href="#checklist">16. Checklist Final</a>
+            </nav>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- SEÇÃO 1: O QUE É HTML? -->
+        <section class="content-section" id="o-que-html">
+            <span class="section-label">01 · O QUE É HTML?</span>
+            <h2>HTML é o <span class="highlight">esqueleto</span> de um website.</h2>
+            
+            <div class="content-block">
+                <p><strong>HTML (HyperText Markup Language)</strong> é a linguagem de marcação usada para criar a <strong>estrutura</strong> de páginas web. Pense no HTML como o <strong>esqueleto</strong> de um site.</p>
+
+                <div class="info-box warning">
+                    <strong>⚠️ Importante:</strong>
+                    <ul>
+                        <li>HTML <strong>não é linguagem de programação</strong></li>
+                        <li>Ele organiza o conteúdo da página</li>
+                        <li>Define textos, imagens, links, formulários, etc.</li>
+                    </ul>
+                </div>
+
+                <p>Escrevemos código HTML utilizando <strong>tags</strong>, como <code>&lt;h1&gt;&lt;/h1&gt;</code> ou <code>&lt;p&gt;&lt;/p&gt;</code>, e dentro delas adicionamos o conteúdo que desejamos que o navegador exiba. O navegador não mostra as tags, mas sim a informação contida entre elas.</p>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: POR QUE A ESTRUTURA IMPORTA? -->
+        <section class="content-section" id="por-que-estrutura">
+            <span class="section-label">02 · POR QUE A ESTRUTURA IMPORTA?</span>
+            <h2>A estrutura básica é <span class="highlight">fundamental</span> para o funcionamento correto.</h2>
+            
+            <div class="content-block">
+                <p>A estrutura básica do HTML serve para:</p>
+
+                <ul>
+                    <li>✅ Informar ao navegador que o documento é HTML</li>
+                    <li>✅ Definir o idioma da página</li>
+                    <li>✅ Separar conteúdo, metadados e configurações</li>
+                    <li>✅ Garantir que a página funcione corretamente</li>
+                </ul>
+
+                <div class="info-box info">
+                    <strong>📌 Sem essa estrutura:</strong> O navegador pode interpretar a página de forma errada, causando problemas de compatibilidade e exibição.
+                </div>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: ESTRUTURA MÍNIMA -->
+        <section class="content-section" id="estrutura-minima">
+            <span class="section-label">03 · ESTRUTURA MÍNIMA</span>
+            <h2>Todo documento HTML deve <span class="highlight">seguir esse padrão</span>.</h2>
+            
+            <div class="content-block">
+                <p>Esta é a base de qualquer website profissional:</p>
+
+                <pre><code class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Título da Página&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Olá, mundo!&lt;/h1&gt;
+        &lt;p&gt;Este é meu primeiro site.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <div class="info-box tip">
+                    <strong>💡 Atalho VS Code:</strong> Digite <strong>!</strong> seguido de <strong>Enter</strong> para inserir a estrutura básica do HTML automaticamente!
+                </div>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 4: DOCTYPE -->
+        <section class="content-section" id="doctype">
+            <span class="section-label">04 · DOCTYPE</span>
+            <h2>A declaração que <span class="highlight">tudo começa</span>.</h2>
+            
+            <div class="content-block">
+                <h3>📌 O que é DOCTYPE?</h3>
+                <p>O <code>&lt;!DOCTYPE html&gt;</code> define para o navegador: <em>"Este documento é HTML5"</em></p>
+
+                <pre><code class="code-block">&lt;!DOCTYPE html&gt;</code></pre>
+
+                <h3>⚠️ Por que é importante?</h3>
+                <ul>
+                    <li>Sem o DOCTYPE, pode ocorrer comportamento inesperado</li>
+                    <li>Problemas de compatibilidade entre navegadores</li>
+                    <li>Sempre deve ser a <strong>primeira linha</strong> do arquivo</li>
+                </ul>
+
+                <div class="info-box example">
+                    <strong>📌 Versões históricas:</strong>
+                    <ul>
+                        <li>HTML 4.01: <code>&lt;!DOCTYPE HTML PUBLIC "..."&gt;</code></li>
+                        <li>XHTML: <code>&lt;!DOCTYPE html PUBLIC "..."&gt;</code></li>
+                        <li>HTML5: <code>&lt;!DOCTYPE html&gt;</code> ✅ (Mais simples!)</li>
+                    </ul>
+                </div>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 5: TAG HTML -->
+        <section class="content-section" id="html-tag">
+            <span class="section-label">05 · TAG HTML</span>
+            <h2>O container que <span class="highlight">envolve tudo</span>.</h2>
+            
+            <div class="content-block">
+                <h3>📌 O que é?</h3>
+                <p>A tag <code>&lt;html&gt;</code> é o <strong>elemento raiz</strong> do documento. <strong>Tudo deve estar dentro dela.</strong></p>
+
+                <pre><code class="code-block">&lt;html lang="pt-BR"&gt;
+    &lt;!-- Conteúdo aqui --&gt;
+&lt;/html&gt;</code></pre>
+
+                <h3>🌐 Atributo lang</h3>
+                <p>Define o idioma da página e oferece várias vantagens:</p>
+
+                <ul>
+                    <li>Define o idioma do documento</li>
+                    <li>Ajuda na <strong>acessibilidade</strong> (leitores de tela)</li>
+                    <li>Melhora <strong>SEO</strong> (Search Engine Optimization)</li>
+                    <li>Permite que o navegador traduza a página automaticamente</li>
+                </ul>
+
+                <div class="info-box info">
+                    <strong>📌 Exemplos de idiomas:</strong>
+                    <ul>
+                        <li><code>lang="pt-BR"</code> → Português (Brasil)</li>
+                        <li><code>lang="pt-PT"</code> → Português (Portugal)</li>
+                        <li><code>lang="en"</code> → Inglês</li>
+                        <li><code>lang="es"</code> → Espanhol</li>
+                    </ul>
+                </div>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 6: HEAD -->
+        <section class="content-section" id="head">
+            <span class="section-label">06 · SEÇÃO HEAD</span>
+            <h2>O cabeçalho que <span class="highlight">não aparece</span> visualmente.</h2>
+            
+            <div class="content-block">
+                <p>O <code>&lt;head&gt;</code> <strong>não aparece visualmente</strong> na página. Ele contém informações importantes sobre o documento.</p>
+
+                <h3>🔍 Elementos comuns dentro do HEAD</h3>
+
+                <div class="tag-card">
+                    <h4>&lt;meta charset="UTF-8"&gt;</h4>
+                    <p>Define o conjunto de caracteres do documento.</p>
+                    <div class="info-box info">
+                        <strong>📌 Por que é importante?</strong> Evita erros com acentos e caracteres especiais: ç, ã, é, à, etc.
+                    </div>
+                </div>
+
+                <div class="tag-card">
+                    <h4>&lt;meta name="viewport"&gt;</h4>
+                    <pre><code class="code-block">&lt;meta name="viewport" 
+      content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                    <p><strong>Essencial para sites responsivos.</strong> Faz o conteúdo se adaptar ao tamanho da tela.</p>
+                </div>
+
+                <div class="tag-card">
+                    <h4>&lt;title&gt;</h4>
+                    <p>Define o título da aba do navegador.</p>
+                    <div class="info-box info">
+                        <strong>📌 Importante para:</strong>
+                        <ul>
+                            <li>Experiência do usuário</li>
+                            <li>SEO (otimização para buscadores)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tag-card">
+                    <h4>&lt;link rel="stylesheet"&gt;</h4>
+                    <p>Importa arquivos CSS (estilos) externos.</p>
+                    <pre><code class="code-block">&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+                </div>
+
+                <div class="tag-card">
+                    <h4>&lt;script&gt;</h4>
+                    <p>Importa arquivos JavaScript ou código JavaScript inline.</p>
+                    <pre><code class="code-block">&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+                </div>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 7: BODY -->
+        <section class="content-section" id="body">
+            <span class="section-label">07 · SEÇÃO BODY</span>
+            <h2>O corpo da página onde <span class="highlight">tudo acontece</span>.</h2>
+            
+            <div class="content-block">
+                <p>Tudo que <strong>aparece visualmente</strong> para o usuário fica dentro do <code>&lt;body&gt;</code>.</p>
+
+                <h3>📝 Exemplos de conteúdo:</h3>
+                <ul>
+                    <li>Textos e parágrafos</li>
+                    <li>Imagens</li>
+                    <li>Botões</li>
+                    <li>Formulários</li>
+                    <li>Vídeos e áudio</li>
+                    <li>Listas</li>
+                    <li>Tabelas</li>
+                </ul>
+
+                <div class="info-box tip">
+                    <strong>💡 Resumo:</strong> Se você quer que algo apareça na página, coloca dentro do <code>&lt;body&gt;</code>. É aqui que o site "ganha vida"!
+                </div>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 8: INDENTAÇÃO -->
+        <section class="content-section" id="indentacao">
+            <span class="section-label">08 · INDENTAÇÃO E ORGANIZAÇÃO</span>
+            <h2>O código bem <span class="highlight">organizado é mais fácil</span> de manter.</h2>
+            
+            <div class="content-block">
+                <h3>🎯 O que é indentação?</h3>
+                <p>Organização visual do código usando espaços ou tabs para criar uma hierarquia visual.</p>
+
+                <h3>Por que usar?</h3>
+                <ul>
+                    <li>📖 Facilita a leitura do código</li>
+                    <li>🔧 Facilita a manutenção</li>
+                    <li>👥 Facilita o trabalho em equipe</li>
+                </ul>
+
+                <h3>Comparação</h3>
+
+                <div class="two-columns">
+                    <div class="column">
+                        <h4>❌ Código bagunçado:</h4>
+                        <pre><code class="code-block">&lt;body&gt;&lt;h1&gt;Título&lt;/h1&gt;&lt;p&gt;Texto&lt;/p&gt;&lt;/body&gt;</code></pre>
+                    </div>
+
+                    <div class="column">
+                        <h4>✅ Código organizado:</h4>
+                        <pre><code class="code-block">&lt;body&gt;
+    &lt;h1&gt;Título&lt;/h1&gt;
+    &lt;p&gt;Texto&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+                    </div>
+                </div>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 9: TAGS -->
+        <section class="content-section" id="tags-basicas">
+            <span class="section-label">09 · TAGS DE ABERTURA E FECHAMENTO</span>
+            <h2>Existem dois tipos de tags no HTML.</h2>
+            
+            <div class="content-block">
+                <h3>🔴 Tags com abertura E fechamento</h3>
+                <p>A maioria das tags possui par de abertura e fechamento:</p>
+                <pre><code class="code-block">&lt;p&gt;Este é um parágrafo&lt;/p&gt;
+&lt;h1&gt;Este é um título&lt;/h1&gt;
+&lt;div&gt;Este é um container&lt;/div&gt;</code></pre>
+
+                <h3>🟦 Tags sem fechamento (self-closing)</h3>
+                <p>Algumas tags não precisam de fechamento:</p>
+                <pre><code class="code-block">&lt;img src="imagem.jpg" alt="Descrição"&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;input type="text"&gt;</code></pre>
+
+                <div class="info-box info">
+                    <strong>📌 Nota:</strong> Tags self-closing não permitem aninhamento de outras tags dentro delas.
+                </div>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 10: COMENTÁRIOS -->
+        <section class="content-section" id="comentarios">
+            <span class="section-label">10 · COMENTÁRIOS</span>
+            <h2>Como documentar seu <span class="highlight">código HTML</span>.</h2>
+            
+            <div class="content-block">
+                <p>Comentários não aparecem na página e são ignorados pelo navegador:</p>
+
+                <pre><code class="code-block">&lt;!-- Isso é um comentário --&gt;
+&lt;!-- Você pode escrever múltiplas linhas
+     de comentários desta forma --&gt;</code></pre>
+
+                <h3>📌 Para que servem?</h3>
+                <ul>
+                    <li>Explicar partes do código</li>
+                    <li>Organizar seções</li>
+                    <li>Desativar trechos de código temporariamente</li>
+                </ul>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 11: ELEMENTOS E ATRIBUTOS -->
+        <section class="content-section" id="elementos-atributos">
+            <span class="section-label">11 · ELEMENTOS E ATRIBUTOS</span>
+            <h2>Componentes que <span class="highlight">definem o conteúdo</span>.</h2>
+            
+            <div class="content-block">
+                <h3>🏷️ O que é um Elemento?</h3>
+                <p>Um <strong>elemento</strong> é composto de:</p>
+                <ul>
+                    <li>Tag de abertura</li>
+                    <li>Conteúdo</li>
+                    <li>Tag de fechamento</li>
+                </ul>
+
+                <pre><code class="code-block">&lt;h3&gt;Este é um elemento&lt;/h3&gt;</code></pre>
+
+                <h3>📋 O que é um Atributo?</h3>
+                <p>Um <strong>atributo</strong> adiciona informação extra ao elemento. Possui <strong>nome</strong> e <strong>valor</strong>.</p>
+
+                <pre><code class="code-block">&lt;img src="foto.jpg" alt="Descrição"&gt;</code></pre>
+
+                <div class="info-box info">
+                    <strong>📌 Exemplo acima:</strong>
+                    <ul>
+                        <li><strong>src</strong> é um atributo que define a fonte (caminho) da imagem</li>
+                        <li><strong>alt</strong> é um atributo que define texto alternativo</li>
+                    </ul>
+                </div>
+
+                <h3>🔄 Aninhamento (Nesting)</h3>
+                <p>Elementos podem conter outros elementos dentro deles:</p>
+
+                <pre><code class="code-block">&lt;div&gt;
+    &lt;h1&gt;Título&lt;/h1&gt;
+    &lt;p&gt;Parágrafo dentro da div&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 12: TAGS COMUNS -->
+        <section class="content-section" id="tags-comuns">
+            <span class="section-label">12 · TAGS COMUNS DO HTML</span>
+            <h2>As tags básicas que você <span class="highlight">usará todos os dias</span>.</h2>
+            
+            <div class="content-block">
+                <div class="tags-grid">
+                    <div class="tag-card">
+                        <h4>&lt;p&gt; Parágrafo</h4>
+                        <p>Define um parágrafo de texto com quebra de linha automática.</p>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;h1&gt; até &lt;h6&gt;</h4>
+                        <p>Títulos e subtítulos. H1 é o maior, H6 é o menor. Use apenas um H1 por página!</p>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;a&gt; Link</h4>
+                        <p>Cria hyperlinks para outras páginas ou recursos.</p>
+                        <pre><code class="code-block">&lt;a href="pagina.html"&gt;Clique aqui&lt;/a&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;img&gt; Imagem</h4>
+                        <p>Exibe imagens na página (self-closing).</p>
+                        <pre><code class="code-block">&lt;img src="imagem.jpg" alt="Descrição"&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;div&gt; Container</h4>
+                        <p>Agrupa elementos. Uma das tags mais utilizadas no HTML. Não possui significado semântico.</p>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;span&gt; Texto Inline</h4>
+                        <p>Destaca palavras ou seções de texto dentro de uma linha.</p>
+                        <pre><code class="code-block">&lt;p&gt;Palavras &lt;span&gt;especiais&lt;/span&gt; aqui&lt;/p&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;strong&gt; Forte Importância</h4>
+                        <p>Marca texto com forte importância semântica (normalmente negrito).</p>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;em&gt; Ênfase</h4>
+                        <p>Marca texto com ênfase semântica (normalmente itálico).</p>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;b&gt; Negrito</h4>
+                        <p>Apenas visual (negrito), sem significado semântico.</p>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;i&gt; Itálico</h4>
+                        <p>Apenas visual (itálico), sem significado semântico.</p>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;blockquote&gt; Citação</h4>
+                        <p>Define uma citação em bloco de texto.</p>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;br&gt; Quebra de Linha</h4>
+                        <p>Quebra de linha (self-closing).</p>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;hr&gt; Separador</h4>
+                        <p>Separação temática (self-closing).</p>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;ul&gt; / &lt;ol&gt; Lista</h4>
+                        <p>Listas desordenadas (bullets) ou ordenadas (números).</p>
+                    </div>
+                </div>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 13: TAGS SEMÂNTICAS -->
+        <section class="content-section" id="tags-semanticas">
+            <span class="section-label">13 · TAGS SEMÂNTICAS</span>
+            <h2>Estruture sua página de forma <span class="highlight">significativa</span>.</h2>
+            
+            <div class="content-block">
+                <p>Tags semânticas descrevem o <strong>significado</strong> do conteúdo, não apenas sua aparência.</p>
+
+                <div class="tags-grid">
+                    <div class="tag-card">
+                        <h4>&lt;header&gt; Cabeçalho</h4>
+                        <p>Cabeçalho da página ou seção. Geralmente contém logo e navegação.</p>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;nav&gt; Navegação</h4>
+                        <p>Área de navegação principal com links.</p>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;main&gt; Conteúdo Principal</h4>
+                        <p>Conteúdo principal único da página. Deve haver apenas um por página.</p>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;section&gt; Seção</h4>
+                        <p>Seção temática do conteúdo. Geralmente possui um título.</p>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;article&gt; Artigo</h4>
+                        <p>Conteúdo independente e reutilizável (posts, notícias).</p>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;aside&gt; Conteúdo Lateral</h4>
+                        <p>Conteúdo relacionado ou lateral à página.</p>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>&lt;footer&gt; Rodapé</h4>
+                        <p>Rodapé da página ou seção. Geralmente contém copyright e links.</p>
+                    </div>
+                </div>
+
+                <h3>📐 Estrutura típica com tags semânticas:</h3>
+
+                <pre><code class="code-block">&lt;header&gt;
+    &lt;nav&gt;Menu de navegação&lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;section&gt;
+        &lt;article&gt;Conteúdo principal&lt;/article&gt;
+    &lt;/section&gt;
+    &lt;aside&gt;Barra lateral&lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    Informações de copyright e links
+&lt;/footer&gt;</code></pre>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 14: META TAGS -->
+        <section class="content-section" id="meta-tags">
+            <span class="section-label">14 · META TAGS IMPORTANTES</span>
+            <h2>Informações que <span class="highlight">o navegador precisa saber</span>.</h2>
+            
+            <div class="content-block">
+                <div class="tags-grid">
+                    <div class="tag-card">
+                        <h4>meta charset</h4>
+                        <p>Define o conjunto de caracteres (use UTF-8).</p>
+                        <pre><code class="code-block">&lt;meta charset="UTF-8"&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>meta viewport</h4>
+                        <p>Configuração para responsividade em mobile.</p>
+                        <pre><code class="code-block">&lt;meta name="viewport" 
+content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>meta description</h4>
+                        <p>Descrição da página (usada em buscadores).</p>
+                        <pre><code class="code-block">&lt;meta name="description" 
+content="Descrição concisa da página"&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-card">
+                        <h4>meta robots</h4>
+                        <p>Controla indexação em buscadores.</p>
+                        <pre><code class="code-block">&lt;meta name="robots" 
+content="index, follow"&gt;</code></pre>
+                    </div>
+                </div>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 15: EXEMPLO PRÁTICO -->
+        <section class="content-section" id="exemplo-pratico">
+            <span class="section-label">15 · EXEMPLO PRÁTICO</span>
+            <h2>Uma página HTML <span class="highlight">completamente estruturada</span>.</h2>
+            
+            <div class="content-block">
+                <h3>📖 Chapeuzinho Vermelho</h3>
+
+                <p>Houve, uma vez uma graciosa menina; quem a via ficava logo gostando dela, assim como ela gostava de todos; particularmente, amava a avozinha, que não sabia o que dar e o que fazer pela netinha. Certa vez, presenteou-a com um chapeuzinho de veludo vermelho e, porque lhe ficava muito bem, a menina não mais quis usar outro e acabou ficando com o apelido de Chapeuzinho Vermelho.</p>
+
+                <blockquote>
+                    <p>"Um dia, a mãe chamou-a e disse-lhe: Vem cá, Chapeuzinho Vermelho; aqui tens um pedaço de bolo e uma garrafa de vinho; leva tudo para a vovó; ela está doente e fraca e com isso se restabelecerá. Põe-te a caminho antes que o sol esquente muito e, quando fores, comporta-te direito; não saias do caminho, senão cais e quebras a garrafa e a vovó ficará sem nada. Quando entrares em seu quarto, não esqueças de dizer "bom-dia, vovó," ao invés de mexericar pelos cantos."</p>
+                </blockquote>
+
+                <h3>📋 Estrutura HTML:</h3>
+
+                <pre><code class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Chapeuzinho&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Chapeuzinho Vermelho&lt;/h1&gt;
+    &lt;p&gt;Houve, uma vez...&lt;/p&gt;
+    &lt;blockquote&gt;...&lt;/blockquote&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <h3>👀 Resultado Visual:</h3>
+                <div class="preview-box">
+                    <h1 class="preview-title">Chapeuzinho Vermelho</h1>
+                    <p>Houve, uma vez uma graciosa menina; quem a via ficava logo gostando dela, assim como ela gostava de todos; particularmente, amava a avozinha, que não sabia o que dar e o que fazer pela netinha.</p>
+                    <blockquote class="preview-blockquote">
+                        <p>"Um dia, a mãe chamou-a e disse-lhe: Vem cá, Chapeuzinho Vermelho; aqui tens um pedaço de bolo e uma garrafa de vinho; leva tudo para a vovó..."</p>
+                    </blockquote>
+                </div>
+
+                <div class="info-box info">
+                    <strong>📌 Observação:</strong> Usamos três elementos para estruturar o conteúdo: <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code> e <code>&lt;blockquote&gt;</code>.
+                </div>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 16: CHECKLIST FINAL -->
+        <section class="content-section" id="checklist">
+            <span class="section-label">16 · CHECKLIST FINAL</span>
+            <h2>Garantindo que sua página <span class="highlight">está correta</span>.</h2>
+            
+            <div class="content-block">
+                <h3>✅ Sua página HTML deve ter:</h3>
+
+                <div class="info-box tip">
+                    <ul>
+                        <li>✓ <code>&lt;!DOCTYPE html&gt;</code> como primeira linha</li>
+                        <li>✓ Tag <code>&lt;html&gt;</code> com atributo <code>lang</code></li>
+                        <li>✓ Seção <code>&lt;head&gt;</code> com meta tags essenciais</li>
+                        <li>✓ Meta <code>charset="UTF-8"</code></li>
+                        <li>✓ Meta <code>viewport</code> para responsividade</li>
+                        <li>✓ Tag <code>&lt;title&gt;</code> descritiva</li>
+                        <li>✓ Seção <code>&lt;body&gt;</code> com o conteúdo</li>
+                        <li>✓ Indentação e organização adequadas</li>
+                        <li>✓ Todas as tags abertas devidamente fechadas</li>
+                        <li>✓ Atributo <code>alt</code> em todas as imagens</li>
+                        <li>✓ Um único <code>&lt;h1&gt;</code> por página</li>
+                        <li>✓ Hierarquia de títulos respeitada (h1 → h2 → h3...)</li>
+                    </ul>
+                </div>
+
+                <h3>📁 Nomear o arquivo:</h3>
+                <ul>
+                    <li>Por convenção, a página principal é <strong>index.html</strong></li>
+                    <li>Use nomes descritivos em <strong>minúsculas</strong></li>
+                    <li>Separe palavras com <strong>hífen</strong> (exemplo: minha-pagina.html)</li>
+                </ul>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- SEÇÃO 17: DESAFIO DA AULA -->
+        <section class="content-section" id="desafio">
+            <span class="section-label">17 · DESAFIO DA AULA</span>
+            <h2>Coloque seu conhecimento em <span class="highlight">prática!</span></h2>
+            
+            <div class="content-block">
+                <p>Agora é a sua vez! Tente completar os desafios abaixo para consolidar o que aprendeu:</p>
+
+                <div class="challenge-box">
+                    <h4>🎯 Desafio 1: Criar uma página simples</h4>
+                    <p>Crie um arquivo <code>index.html</code> com a estrutura mínima do HTML que aprendeu nesta aula. Não se esqueça de:</p>
+                    <ul>
+                        <li>DOCTYPE e tag html com lang</li>
+                        <li>Meta tags essenciais (charset e viewport)</li>
+                        <li>Um título descritivo na aba</li>
+                    </ul>
+                </div>
+
+                <div class="challenge-box">
+                    <h4>🎯 Desafio 2: Estruturar conteúdo</h4>
+                    <p>Escreva um pequeno parágrafo sobre seu hobby favorito usando:</p>
+                    <ul>
+                        <li>Um <code>&lt;h1&gt;</code> como título</li>
+                        <li>Pelo menos 3 parágrafos <code>&lt;p&gt;</code></li>
+                        <li>Palavras destacadas com <code>&lt;strong&gt;</code> e <code>&lt;em&gt;</code></li>
+                    </ul>
+                </div>
+
+                <div class="challenge-box">
+                    <h4>🎯 Desafio 3: Usar tags semânticas</h4>
+                    <p>Reescreva o desafio anterior usando tags semânticas:</p>
+                    <ul>
+                        <li>Envolva o conteúdo em uma <code>&lt;article&gt;</code></li>
+                        <li>Use <code>&lt;section&gt;</code> para separar partes diferentes</li>
+                        <li>Adicione um <code>&lt;footer&gt;</code> com data ou autor</li>
+                    </ul>
+                </div>
+
+                <div class="challenge-box">
+                    <h4>🎯 Desafio 4: Validar seu código</h4>
+                    <p>Use o <a href="https://validator.w3.org/" target="_blank">W3C Validator</a> para verificar se seu HTML está correto:</p>
+                    <ul>
+                        <li>Verifique se não há erros de sintaxe</li>
+                        <li>Certifique-se de que todas as tags estão fechadas</li>
+                        <li>Confirme que segue os padrões web</li>
+                    </ul>
+                </div>
+
+                <hr class="section-divider">
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <section class="cta-section">
+            <h2>Pronto para começar?</h2>
+            <p>Agora que você entende a estrutura básica do HTML, está pronto para criar suas primeiras páginas web!</p>
+            <div class="cta-buttons">
+                <a href="../aula1/index.html" class="btn btn-secondary"><img src="../img/right-arrow.png" alt="←" class="btn-icon-left"> Voltar para Aula 1</a>
+                <a href="../aula3/index.html" class="btn btn-primary">Ir para Aula 3 <img src="../img/right-arrow.png" alt="→" class="btn-icon"></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button id="scrollToTop" class="scroll-to-top"><img src="../img/next.png" alt="↑"></button>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 <a href="https://github.com/rhayssakramer/tudo-sobre-html">Tudo Sobre HTML</a>. Feito com 🧡 para quem quer aprender HTML de verdade.</p>
+            <div class="footer-links">
+                <a href="../">Sobre</a>
+                <a href="../">Aulas</a>
+                <a href="https://github.com/rhayssakramer" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
