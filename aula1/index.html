@@ -28,10 +28,15 @@
     <!-- MAIN CONTENT -->
     <main class="aula-container">
         <!-- AULA HEADER -->
-        <section class="aula-header">
-            <span class="aula-badge">AULA 01</span>
-            <h1>Introdução ao HTML</h1>
-            <p class="intro-text">Conheça a história do HTML, entenda o que é, como funciona a comunicação cliente-servidor, explore navegadores e aplicações web.</p>
+        <section class="aula-header-hero">
+            <div class="hero-content">
+                <h1>O que é <span class="highlight">HTML</span> de verdade?</h1>
+                <p class="hero-text">HTML, CSS e JavaScript... tudo isso parecem palavras estranhas. Aqui você vai entender cada uma delas. Você mexe nos sliders, clica nas palavras, vê a magia acontecendo. Sem decoreba.</p>
+                <a href="#toc-list" id="btn-hero" class="btn btn-primary">Bora começar 🚀</a>
+            </div>
+            <div class="hero-illustration">
+                <img src="../img/html-3d.webp" alt="HTML 3D" class="hero-image">
+            </div>
         </section>
 
         <!-- TABELA DE CONTEÚDOS -->
@@ -39,26 +44,24 @@
             <h2>📚 Índice de Conteúdos</h2>
             <nav class="toc-list">
                 <a href="#historia">1. História do HTML</a>
-                <a href="#oque-html">2. O que é o HTML?</a>
-                <a href="#client-server">3. Comunicação Client x Server</a>
-                <a href="#protocolos">4. O que são Protocolos?</a>
-                <a href="#requisicao">5. Requisição (Request)</a>
-                <a href="#resposta">6. Resposta (Response)</a>
-                <a href="#formatos">7. Formatos de Dados</a>
-                <a href="#apis">8. APIs (Application Programming Interface)</a>
-                <a href="#navegadores">9. Navegadores</a>
-                <a href="#apps-web">10. Aplicações Web</a>
-                <a href="#mobile">11. Dispositivos Móveis</a>
-                <a href="#tabela-client-server">12. Client vs Server (Tabela)</a>
-                <a href="#timeline">13. Timeline do HTML</a>
+                <a href="#timeline">2. Timeline do HTML</a>
+                <a href="#oque-html">3. O que é o HTML?</a>
+                <a href="#client-server">4. Comunicação Client x Server</a>
+                <a href="#protocolos">5. O que são Protocolos?</a>
+                <a href="#requisicao">6. Requisição (Request)</a>
+                <a href="#resposta">7. Resposta (Response)</a>
+                <a href="#formatos">8. Formatos de Dados</a>
+                <a href="#apis">9. APIs (Application Programming Interface)</a>
+                <a href="#navegadores">10. Navegadores</a>
+                <a href="#apps-web">11. Aplicações Web</a>
+                <a href="#mobile">12. Dispositivos Móveis</a>
+                <a href="#tabela-client-server">13. Client vs Server (Tabela)</a>
                 <a href="#curiosidades">14. Curiosidades e Dicas</a>
                 <a href="#checklist">15. Checklist Resumo</a>
                 <a href="#recursos">16. Recursos Externos</a>
                 <a href="#atividade">17. Atividade Prática</a>
             </nav>
         </section>
-
-        <hr class="section-divider">
 
         <!-- SEÇÃO 1: HISTÓRIA DO HTML -->
         <section class="content-section" id="historia">
@@ -95,13 +98,65 @@
                         </ul>
                     </li>
                 </ul>
-                <hr class="section-divider">
             </div>
         </section>
 
-        <!-- SEÇÃO 2: O QUE É HTML? -->
+        <!-- SEÇÃO 2: TIMELINE DA EVOLUÇÃO DO HTML -->
+        <section class="content-section" id="timeline">
+            <span class="section-label">02 · TIMELINE DO HTML</span>
+            <h2>A evolução do <span class="highlight">HTML ao longo dos anos</span>.</h2>
+            
+            <div class="content-block">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-date">1991</span>
+                        <div class="timeline-content">
+                            <h3>HTML 1.0</h3>
+                            <p>Tim Berners-Lee cria a primeira versão com 18 tags básicas.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">1995</span>
+                        <div class="timeline-content">
+                            <h3>HTML 2.0</h3>
+                            <p>Primeira especificação formal publicada.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">1997</span>
+                        <div class="timeline-content">
+                            <h3>HTML 3.2</h3>
+                            <p>Introduz tabelas, scripts e CSS.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">1999</span>
+                        <div class="timeline-content">
+                            <h3>HTML 4.01</h3>
+                            <p>Separação entre estrutura (HTML) e apresentação (CSS).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2014</span>
+                        <div class="timeline-content">
+                            <h3>HTML5</h3>
+                            <p>Oficializado com tags semânticas, vídeo/áudio nativo e APIs.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">Hoje</span>
+                        <div class="timeline-content">
+                            <h3>HTML5.x (Living Standard)</h3>
+                            <p>Evolução contínua, atualizado regularmente pelo WHATWG.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: O QUE É HTML? -->
         <section class="content-section" id="oque-html">
-            <span class="section-label">02 · O QUE É HTML?</span>
+            <span class="section-label">03 · O QUE É HTML?</span>
             <h1>A linguagem de marcação que <span class="highlight">constrói a web</span>.</h1>
             
             <div class="content-block">
@@ -135,13 +190,12 @@
                 <div class="info-box tip">
                     <strong>💡 Dica:</strong> A documentação do HTML está no site <a href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools.com</a>.
                 </div>
-                <hr class="section-divider">
             </div>
         </section>
 
-        <!-- SEÇÃO 3: COMUNICAÇÃO CLIENT X SERVER -->
+        <!-- SEÇÃO 4: COMUNICAÇÃO CLIENT X SERVER -->
         <section class="content-section" id="client-server">
-            <span class="section-label">03 · COMUNICAÇÃO CLIENT X SERVER</span>
+            <span class="section-label">04 · COMUNICAÇÃO CLIENT X SERVER</span>
             <h1>Cliente e servidor: <span class="highlight">duas partes que conversam</span>.</h1>
             
             <div class="content-block">
@@ -195,12 +249,11 @@ Cliente ← (HTTP) ← Servidor</code></pre>
                     </ul>
                 </div>
             </div>
-            <hr class="section-divider">
         </section>
 
-        <!-- SEÇÃO 4: PROTOCOLOS -->
+        <!-- SEÇÃO 5: PROTOCOLOS -->
         <section class="content-section" id="protocolos">
-            <span class="section-label">04 · O QUE SÃO PROTOCOLOS?</span>
+            <span class="section-label">05 · O QUE SÃO PROTOCOLOS?</span>
             <h1>As regras que fazem a <span class="highlight">comunicação funcionar</span>.</h1>
             
             <div class="content-block">
@@ -253,13 +306,12 @@ Cliente ← (HTTP) ← Servidor</code></pre>
                     </li>
                 </ul>
             </div>
-            <hr class="section-divider">
         </section>
 
-        <!-- SEÇÃO 5: REQUISIÇÃO -->
+        <!-- SEÇÃO 6: REQUISIÇÃO -->
         <section class="content-section" id="requisicao">
-            <span class="section-label">05 · REQUISIÇÃO</span>
-            <h2>A mensagem que o <span class="highlight">cliente envia</span>.</h2>
+            <span class="section-label">06 · REQUISIÇÃO</span>
+            <h1>A mensagem que o <span class="highlight">cliente envia</span>.</h1>
             
             <div class="content-block">
                 <p>Uma <strong>requisição</strong> é a mensagem enviada pelo cliente. Ela contém:</p>
@@ -306,10 +358,10 @@ Cliente ← (HTTP) ← Servidor</code></pre>
             </div>
         </section>
 
-        <!-- SEÇÃO 6: RESPOSTA -->
+        <!-- SEÇÃO 7: RESPOSTA -->
         <section class="content-section" id="resposta">
-            <span class="section-label">06 · RESPOSTA</span>
-            <h2>A mensagem que o <span class="highlight">servidor retorna</span>.</h2>
+            <span class="section-label">07 · RESPOSTA</span>
+            <h1>A mensagem que o <span class="highlight">servidor retorna</span>.</h1>
             
             <div class="content-block">
                 <p>A <strong>resposta</strong> vem do servidor para o cliente. Contém:</p>
@@ -359,13 +411,12 @@ Cliente ← (HTTP) ← Servidor</code></pre>
                     </tbody>
                 </table>
             </div>
-            <hr class="section-divider">
         </section>
 
-        <!-- SEÇÃO 7: FORMATOS DE DADOS -->
+        <!-- SEÇÃO 8: FORMATOS DE DADOS -->
         <section class="content-section" id="formatos">
-            <span class="section-label">07 · FORMATOS DE DADOS</span>
-            <h2><span class="highlight">JSON, XML</span> e outras linguagens de dados.</h2>
+            <span class="section-label">08 · FORMATOS DE DADOS</span>
+            <h1><span class="highlight">JSON, XML</span> e outras linguagens de dados.</h1>
             
             <div class="content-block">
                 <h3>📦 JSON (mais usado)</h3>
@@ -384,13 +435,12 @@ Cliente ← (HTTP) ← Servidor</code></pre>
                     <strong>💡 Dica:</strong> JSON domina APIs modernas.
                 </div>
             </div>
-            <hr class="section-divider">
         </section>
 
-        <!-- SEÇÃO 8: APIs -->
+        <!-- SEÇÃO 9: APIs -->
         <section class="content-section" id="apis">
-            <span class="section-label">08 · APIS</span>
-            <h2>O garçom que leva o <span class="highlight">pedido até a cozinha</span>.</h2>
+            <span class="section-label">09 · APIS</span>
+            <h1>O garçom que leva o <span class="highlight">pedido até a cozinha</span>.</h1>
             
             <div class="content-block">
                 <p>A <strong>API</strong> é o meio pelo qual o cliente conversa com o servidor.</p>
@@ -433,13 +483,12 @@ Cliente ← (HTTP) ← Servidor</code></pre>
                     </ul>
                 </div>
             </div>
-            <hr class="section-divider">
         </section>
 
-        <!-- SEÇÃO 9: NAVEGADORES -->
+        <!-- SEÇÃO 10: NAVEGADORES -->
         <section class="content-section" id="navegadores">
-            <span class="section-label">09 · NAVEGADORES</span>
-            <h2>Os programas que <span class="highlight">interpretam o HTML</span>.</h2>
+            <span class="section-label">10 · NAVEGADORES</span>
+            <h1>Os programas que <span class="highlight">interpretam o HTML</span>.</h1>
             
             <div class="content-block">
                 <p>Os <strong>navegadores</strong> (ou browsers) são programas que permitem acessar e visualizar páginas da web. Eles interpretam <strong>HTML, CSS e JavaScript</strong> para exibir os sites corretamente.</p>
@@ -475,10 +524,10 @@ Cliente ← (HTTP) ← Servidor</code></pre>
             </div>
         </section>
 
-        <!-- SEÇÃO 10: APLICAÇÕES WEB -->
+        <!-- SEÇÃO 11: APLICAÇÕES WEB -->
         <section class="content-section" id="apps-web">
-            <span class="section-label">10 · APLICAÇÕES WEB</span>
-            <h2>Sistemas que funcionam no <span class="highlight">navegador</span>.</h2>
+            <span class="section-label">11 · APLICAÇÕES WEB</span>
+            <h1>Sistemas que funcionam no <span class="highlight">navegador</span>.</h1>
             
             <div class="content-block">
                 <p>As <strong>aplicações web</strong> são sistemas acessados via navegador, sem necessidade de instalação no dispositivo do usuário. Elas utilizam a internet para funcionar e geralmente seguem o modelo <strong>Cliente-Servidor</strong>.</p>
@@ -520,13 +569,12 @@ Cliente ← (HTTP) ← Servidor</code></pre>
                     </div>
                 </div>
             </div>
-            <hr class="section-divider">
         </section>
 
-        <!-- SEÇÃO 11: DISPOSITIVOS MÓVEIS -->
+        <!-- SEÇÃO 12: DISPOSITIVOS MÓVEIS -->
         <section class="content-section" id="mobile">
-            <span class="section-label">11 · DISPOSITIVOS MÓVEIS</span>
-            <h2>A computação que cabe na <span class="highlight">palma da mão</span>.</h2>
+            <span class="section-label">12 · DISPOSITIVOS MÓVEIS</span>
+            <h1>A computação que cabe na <span class="highlight">palma da mão</span>.</h1>
             
             <div class="content-block">
                 <p>Os <strong>dispositivos móveis</strong> são aparelhos portáteis que possuem capacidade de processamento, conexão à internet e interatividade por meio de telas sensíveis ao toque.</p>
@@ -573,12 +621,10 @@ Cliente ← (HTTP) ← Servidor</code></pre>
             </div>
         </section>
 
-        <hr class="section-divider">
-
-        <!-- SEÇÃO 12: CLIENT VS SERVER (TABELA COMPARATIVA) -->
+        <!-- SEÇÃO 13: CLIENT VS SERVER (TABELA COMPARATIVA) -->
         <section class="content-section" id="tabela-client-server">
-            <span class="section-label">12 · CLIENT VS SERVER</span>
-            <h2>Comparação visual entre <span class="highlight">Cliente e Servidor</span>.</h2>
+            <span class="section-label">13 · CLIENT VS SERVER</span>
+            <h1>Comparação visual entre <span class="highlight">Cliente e Servidor</span>.</h1>
             
             <div class="content-block">
                 <table class="content-table comparison-table">
@@ -618,67 +664,12 @@ Cliente ← (HTTP) ← Servidor</code></pre>
                     </tbody>
                 </table>
             </div>
-            <hr class="section-divider">
         </section>
 
-        <!-- SEÇÃO 13: TIMELINE DA EVOLUÇÃO DO HTML -->
-        <section class="content-section" id="timeline">
-            <span class="section-label">13 · TIMELINE DO HTML</span>
-            <h2>A evolução do <span class="highlight">HTML ao longo dos anos</span>.</h2>
-            
-            <div class="content-block">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <span class="timeline-date">1991</span>
-                        <div class="timeline-content">
-                            <h3>HTML 1.0</h3>
-                            <p>Tim Berners-Lee cria a primeira versão com 18 tags básicas.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">1995</span>
-                        <div class="timeline-content">
-                            <h3>HTML 2.0</h3>
-                            <p>Primeira especificação formal publicada.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">1997</span>
-                        <div class="timeline-content">
-                            <h3>HTML 3.2</h3>
-                            <p>Introduz tabelas, scripts e CSS.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">1999</span>
-                        <div class="timeline-content">
-                            <h3>HTML 4.01</h3>
-                            <p>Separação entre estrutura (HTML) e apresentação (CSS).</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">2014</span>
-                        <div class="timeline-content">
-                            <h3>HTML5</h3>
-                            <p>Oficializado com tags semânticas, vídeo/áudio nativo e APIs.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">Hoje</span>
-                        <div class="timeline-content">
-                            <h3>HTML5.x (Living Standard)</h3>
-                            <p>Evolução contínua, atualizado regularmente pelo WHATWG.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="section-divider">
-        </section>
-
-        <!-- SEÇÃO 14: CURIOSIDADES E DICAS -->
+        <!-- SEÇÃO 13: CURIOSIDADES E DICAS -->
         <section class="content-section" id="curiosidades">
             <span class="section-label">14 · CURIOSIDADES E DICAS</span>
-            <h2><span class="highlight">Fatos interessantes</span> sobre HTML.</h2>
+            <h1><span class="highlight">Fatos interessantes</span> sobre HTML.</h1>
             
             <div class="content-block">
                 <div class="info-box tip">
@@ -701,13 +692,12 @@ Cliente ← (HTTP) ← Servidor</code></pre>
                     <strong>📌 Dica 5:</strong> O HTML evolui constantemente. Novas tags e funcionalidades são adicionadas regularmente. Acompanhe a documentação oficial!
                 </div>
             </div>
-            <hr class="section-divider">
         </section>
 
-        <!-- SEÇÃO 15: CHECKLIST/RESUMO -->
+        <!-- SEÇÃO 15: CHECKLIST RESUMO -->
         <section class="content-section" id="checklist">
             <span class="section-label">15 · CHECKLIST RESUMO</span>
-            <h2>Pontos-chave para <span class="highlight">revisar</span> desta aula.</h2>
+            <h1>Pontos-chave para <span class="highlight">revisar</span> desta aula.</h1>
             
             <div class="content-block">
                 <div class="checklist">
@@ -757,13 +747,12 @@ Cliente ← (HTTP) ← Servidor</code></pre>
                     </label>
                 </div>
             </div>
-            <hr class="section-divider">
         </section>
 
         <!-- SEÇÃO 16: RECURSOS EXTERNOS -->
         <section class="content-section" id="recursos">
             <span class="section-label">16 · RECURSOS EXTERNOS</span>
-            <h2>Documentação e ferramentas <span class="highlight">úteis</span> para estudar HTML.</h2>
+            <h1>Documentação e ferramentas <span class="highlight">úteis</span> para estudar HTML.</h1>
             
             <div class="content-block">
                 <h3>📚 Documentação Oficial</h3>
@@ -787,13 +776,12 @@ Cliente ← (HTTP) ← Servidor</code></pre>
                     <li><a href="https://developers.google.com/speed/pagespeed/insights" target="_blank">Google PageSpeed Insights</a> - Analisa performance</li>
                 </ul>
             </div>
-            <hr class="section-divider">
         </section>
 
         <!-- SEÇÃO 17: ATIVIDADE PRÁTICA -->
         <section class="content-section" id="atividade">
             <span class="section-label">17 · ATIVIDADE PRÁTICA</span>
-            <h2>Hora de <span class="highlight">colocar a mão na massa</span>!</h2>
+            <h1>Hora de <span class="highlight">colocar a mão na massa</span>!</h1>
             
             <div class="content-block">
                 <div class="info-box tip">
@@ -836,12 +824,11 @@ Cliente ← (HTTP) ← Servidor</code></pre>
                     <strong>💡 Dica:</strong> Inspecione o código HTML de sites que você gosta! Clique com o botão direito → "Inspecionar" e veja como é feito!
                 </div>
             </div>
-            <hr class="section-divider">
         </section>
 
         <!-- SEÇÃO DE CONCLUSÃO -->
         <section class="content-section conclusion">
-            <h2>🎓 Conclusão</h2>
+            <h1>🎓 Conclusão</h1>
             <p>Nesta aula, você aprendeu os conceitos fundamentais do HTML, desde sua história até a compreensão de como funciona a web moderna. Entender a comunicação Cliente-Servidor, protocolos, navegadores e tipos de aplicações é essencial para qualquer desenvolvedor web.</p>
             <p>Na próxima aula, vamos mergulhar nos detalhes das tags HTML e como estruturar um documento web corretamente!</p>
         </section>

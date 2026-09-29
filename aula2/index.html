@@ -353,18 +353,44 @@
             <h2>Como documentar seu <span class="highlight">código HTML</span>.</h2>
             
             <div class="content-block">
-                <p>Comentários não aparecem na página e são ignorados pelo navegador:</p>
+                <p>Comentários são trechos de código que <strong>não aparecem visualmente</strong> na página. Eles servem para documentar e organizar seu código, tornando-o mais fácil de entender e manter.</p>
 
-                <pre><code class="code-block">&lt;!-- Isso é um comentário --&gt;
-&lt;!-- Você pode escrever múltiplas linhas
-     de comentários desta forma --&gt;</code></pre>
+                <h3>🔍 Tipos de Comentários</h3>
+
+                <h4>1️⃣ Comentário de Uma Linha</h4>
+                <p>Use para notas rápidas e breves:</p>
+                <pre><code class="code-block">&lt;!-- Este é um comentário de uma linha --&gt;</code></pre>
+
+                <h4>2️⃣ Comentário de Múltiplas Linhas</h4>
+                <p>Use para explicações mais longas ou documentação:</p>
+                <pre><code class="code-block">&lt;!-- 
+    Este é um comentário que ocupa
+    múltiplas linhas. Útil para explicar
+    seções inteiras do código
+--&gt;</code></pre>
+
+                <h4>3️⃣ Comentários para Organizar Seções</h4>
+                <p>Use para separar diferentes partes do seu código:</p>
+                <pre><code class="code-block">&lt;!-- ========== HEADER ========== --&gt;
+
+&lt;!-- ========== FOOTER ========== --&gt;</code></pre>
+
+                <h4>4️⃣ Comentários para Desativar Código</h4>
+                <p>Use para "desligar" temporariamente parte do código sem deletar:</p>
+                <pre><code class="code-block">&lt;!-- &lt;p&gt;Este parágrafo está desativado&lt;/p&gt; --&gt;</code></pre>
 
                 <h3>📌 Para que servem?</h3>
                 <ul>
-                    <li>Explicar partes do código</li>
-                    <li>Organizar seções</li>
-                    <li>Desativar trechos de código temporariamente</li>
+                    <li>✅ Explicar o propósito de uma seção</li>
+                    <li>✅ Deixar notas para você ou para outros desenvolvedores</li>
+                    <li>✅ Organizar o código em seções lógicas</li>
+                    <li>✅ Desativar trechos de código temporariamente</li>
+                    <li>✅ Melhorar a manutenibilidade do projeto</li>
                 </ul>
+
+                <div class="info-box tip">
+                    <strong>💡 Boa Prática:</strong> Use comentários com moderação. Um código bem escrito é mais fácil de entender do que muitos comentários explicando código confuso!
+                </div>
 
                 <hr class="section-divider">
             </div>
