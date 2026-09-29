@@ -338,6 +338,11 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.8;
 }
 
+.content-block li a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
 .content-block code {
     background: #f5e9cf;
     padding: 0.2rem 0.5rem;
@@ -579,11 +584,11 @@ pre::-webkit-scrollbar-thumb {
 
 /* EXAMPLE BOX */
 .example-box {
-    background: #f9f9f9;
+    background: #fff3cd;
     padding: 1.5rem;
     border-radius: 8px;
     margin: 2rem 0;
-    border: 2px solid #ddd;
+
     border-left: 4px solid var(--primary-color);
 }
 
@@ -779,21 +784,23 @@ pre::-webkit-scrollbar-thumb {
 
 /* BUTTONS */
 .btn {
+    padding: 1rem 2rem;
+    border: 2px solid #000;
+    border-right: 4px solid #000;
+    border-bottom: 4px solid #000;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-    padding: 0.8rem 1.8rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s;
-    border: 2px solid #000;
-    border-right: 3px solid #000;
-    border-bottom: 3px solid #000;
 }
 
-#btn-hero{
-    width: 202px;
+#btn-hero {
+    cursor: pointer;
 }
 
 .btn-icon {
@@ -816,12 +823,15 @@ pre::-webkit-scrollbar-thumb {
 }
 
 .btn-secondary {
-    background: white;
+    background-color: #f5ecdf;
     color: var(--text-dark);
+    border: 2px solid #000;
+    border-right: 4px solid #000;
+    border-bottom: 4px solid #000;
 }
 
 .btn-secondary:hover {
-    background: var(--light-bg);
+    background-color: var(--light-bg);
     transform: translateY(-3px) translateX(-3px);
 }
 
