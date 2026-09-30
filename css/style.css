@@ -373,6 +373,18 @@ h1, h2, h3, h4, h5, h6 {
     gap: 0.4rem;
 }
 
+.aula-em-breve {
+    align-self: flex-start;
+    background: #f5e9cf;
+    color: var(--text-dark);
+    border: 2px solid var(--text-dark);
+    border-radius: 50px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    box-shadow: 2px 2px 0 var(--text-dark);
+}
+
 .arrow-icon {
     width: 16px;
     height: 16px;
@@ -507,13 +519,33 @@ h1, h2, h3, h4, h5, h6 {
 
 .hack-item code {
     display: block;
-    background: var(--dark-bg);
-    color: #ff6b35;
+    background: #282a37;
+    color: #00ff00;
     padding: 1rem;
     border-radius: 8px;
     font-family: 'Courier New', monospace;
     font-size: 0.9rem;
     overflow-x: auto;
+    scrollbar-color: #888 transparent;
+    scrollbar-width: thin;
+}
+
+.hack-item code::-webkit-scrollbar {
+    height: 6px;
+    background: transparent;
+}
+
+.hack-item code::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.hack-item code::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.hack-item code::-webkit-scrollbar-button {
+    display: none;
 }
 
 /* FOOTER */

@@ -95,6 +95,14 @@ const aulas = [
 // Função para gerar um card de aula
 function gerarCardAula(aula) {
     const tagsHTML = aula.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+    const emBreve = Number(aula.numero) >= 3 && Number(aula.numero) <= 9;
+    const descricaoHTML = aula.descricao
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    const acessoHTML = emBreve
+        ? '<span class="aula-em-breve">Em breve</span>'
+        : `<a href="${aula.link}" class="aula-link">Abrir aula <img src="./img/right-arrow.png" alt="→" class="arrow-icon"></a>`;
     
     return `
         <div class="aula-card" id="${aula.id}" style="--card-color: ${aula.cor};">
@@ -104,11 +112,11 @@ function gerarCardAula(aula) {
             </div>
             <div class="aula-number">${aula.numero}</div>
             <h3>${aula.titulo}</h3>
-            <p>${aula.descricao}</p>
+            <p>${descricaoHTML}</p>
             <div class="tags">
                 ${tagsHTML}
             </div>
-            <a href="${aula.link}" class="aula-link">Abrir aula <img src="./img/right-arrow.png" alt="→" class="arrow-icon"></a>
+            ${acessoHTML}
         </div>
     `;
 }

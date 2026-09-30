@@ -91,6 +91,64 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
+/* MENU DE TÓPICOS */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown > a {
+    display: block;
+}
+
+.nav-topicos {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: min(360px, calc(100vw - 2rem));
+    max-height: 70vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    list-style: none;
+    padding: 0.6rem;
+    background: #fff9ec;
+    border: 2px solid #000;
+    border-radius: var(--border-radius);
+    box-shadow: 4px 4px 0 #000;
+    scrollbar-color: #888 transparent;
+    scrollbar-width: thin;
+    z-index: 101;
+}
+
+.nav-dropdown:hover .nav-topicos,
+.nav-dropdown:focus-within .nav-topicos {
+    display: block;
+}
+
+.nav .nav-topicos a {
+    display: block;
+    padding: 0.65rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.nav .nav-topicos a:hover,
+.nav .nav-topicos a:focus-visible {
+    background: #f5e9cf;
+    color: var(--text-dark);
+    outline: 2px solid var(--primary-color);
+    outline-offset: -2px;
+}
+
+@media (max-width: 768px) {
+    .nav-topicos {
+        position: fixed;
+        top: 65px;
+        right: 1rem;
+    }
+}
+
 /* MAIN CONTAINER */
 .aula-container {
     max-width: 1000px;
